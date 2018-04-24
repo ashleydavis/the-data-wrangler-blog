@@ -25,7 +25,7 @@ github_username:  ashleydavis
 # Build settings
 # https://www.taniarascia.com/make-a-static-website-with-jekyll/comment-page-1/
 markdown: kramdown
-remote_theme: "mmistakes/minimal-mistakes"
+theme: minimal-mistakes-jekyll
 plugins:
   - jekyll-feed
 sass:
