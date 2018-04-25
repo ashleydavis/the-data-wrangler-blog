@@ -2,6 +2,7 @@
 layout: post
 title: Acquiring stock market data from Alpha Vantage
 date: '2017-10-13 03:24:20'
+permalink: acquiring-stock-market-data-from-alpha-vantage
 ---
 
 As a stock trader I need a ready of supply stock market data for analysis and visualisation. That data is needed for decision making and I often render it to a chart to better understand it. 

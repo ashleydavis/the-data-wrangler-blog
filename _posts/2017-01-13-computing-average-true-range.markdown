@@ -3,6 +3,7 @@ layout: post
 title: Average true range
 image: "/content/images/2017/02/ATR.png"
 date: '2017-01-13 03:18:40'
+permalink: computing-average-true-range
 ---
 
 *Average true range* is an indicator that is useful for judging the volatility of a stock. I use this to set the level for my [stop loss orders](http://www.investopedia.com/articles/stocks/09/use-stop-loss.asp). In this post I'm going to show how to calculate and visualise average true range in JavaScript.

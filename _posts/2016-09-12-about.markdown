@@ -2,6 +2,7 @@
 layout: post
 title: About
 date: '2016-09-12 03:57:00'
+permalink: about
 ---
 
 > The first principle is that you must not fool yourself and you are the easiest person to fool. 

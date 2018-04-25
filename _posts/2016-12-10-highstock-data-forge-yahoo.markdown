@@ -3,6 +3,7 @@ layout: post
 title: Highstock + Data-Forge + Yahoo
 image: "/content/images/2016/12/screenshot.png"
 date: '2016-12-10 01:41:00'
+permalink: highstock-data-forge-yahoo
 ---
 
 In this first post on *The Data Wrangler* I show how to visualise financial data from the Yahoo API using Data-Forge and Highstock. I also demonstrate how to apply a *simple moving average* to the price data.

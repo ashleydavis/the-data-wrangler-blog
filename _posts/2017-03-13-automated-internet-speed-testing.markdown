@@ -3,6 +3,7 @@ layout: post
 title: Automated internet speed testing
 image: "/content/images/2017/03/Cover-1.png"
 date: '2017-03-13 05:58:20'
+permalink: automated-internet-speed-testing
 ---
 
 Do you have a slow internet? Need to visualize your internet speed over time? Do you want to know when outages are happening?
