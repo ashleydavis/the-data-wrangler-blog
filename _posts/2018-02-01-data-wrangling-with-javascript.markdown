@@ -2,14 +2,14 @@
 layout: post
 title: 'I''m writing a book: Data Wrangling with JavaScript!'
 featured: true
-image: "/content/images/2018/02/Banner-4.png"
+image: "content/images/2018/02/Banner-4.png"
 date: '2018-02-01 02:54:10'
 permalink: data-wrangling-with-javascript
 ---
 
 I work with JavaScript quite a lot and it shows in this blog, so you won't be surprised to hear that I've been putting together a book that teaches how to do data wrangling in JavaScript.
 
-![Data Wrangling with JavaScript book cover](/content/images/2018/02/Davis-DWJS-HI-MEAP---reduced-2.png)
+![Data Wrangling with JavaScript book cover](content/images/2018/02/Davis-DWJS-HI-MEAP---reduced-2.png)
 
 Well this book has just been launched on the [Manning early access](https://www.manning.com/books/data-wrangling-with-javascript) program!
 
