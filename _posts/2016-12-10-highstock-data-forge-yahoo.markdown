@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Highstock + Data-Forge + Yahoo
-image: "/content/images/2016/12/screenshot.png"
+image: "content/images/2016/12/screenshot.png"
 date: '2016-12-10 01:41:00'
 permalink: highstock-data-forge-yahoo
 ---
@@ -68,7 +68,7 @@ You can now go to [http://localhost:8080](http://localhost:8080/) in your browse
 
 In case the live demo is down... here is a screenshot.
 
-![](/content/images/2016/12/screenshot-1.png)
+![](content/images/2016/12/screenshot-1.png)
 
 ## Highstock
 

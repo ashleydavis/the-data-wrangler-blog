@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Graphing stock data with Highstock and Data-Forge
-image: "/content/images/2017/08/Post_image-2.png"
+image: "content/images/2017/08/Post_image-2.png"
 date: '2017-08-09 19:00:00'
 permalink: graphing-stock-data-with-highstock-and-data-forge
 ---
@@ -69,7 +69,7 @@ Assuming the server started up without error, you can now browse to [http://loca
 
 In case you don't want to run the code... this screenshot shows what it looks like:
 
-![](/content/images/2017/08/Chart-screenshot.png)
+![](content/images/2017/08/Chart-screenshot.png)
 
 ## Highstock
 
@@ -93,7 +93,7 @@ Multiple data series can be stacked on top of each other. This is how the SMA is
 
 In the example code I use the chart types: [_candlestick_](https://en.wikipedia.org/wiki/Candlestick_chart), _line_ and _column_. There are [many more chart types available](http://api.highcharts.com/highstock#plotOptions). 
 
-![](/content/images/2017/08/Chart_types_annotated-1.png)
+![](content/images/2017/08/Chart_types_annotated-1.png)
 
 ## Data-Forge
 
@@ -137,7 +137,7 @@ Just remember to **plugin in your own API key otherwise the API won't work for o
 
 After downloading the CSV file you can view it in Excel to understand the structure of the data:
 
-![Microsoft stock data CSV viewed in Excel](/content/images/2017/08/Microsoft-stock-data-CSV-viewed-in-Excel.png)
+![Microsoft stock data CSV viewed in Excel](content/images/2017/08/Microsoft-stock-data-CSV-viewed-in-Excel.png)
 
 I often prefer to work with CSV which is a more compact format than JSON and convenient to load into Excel, but it you prefer JSON then Alpha Vantage supports that as well: just change the `datatype` parameter to JSON as follows:
 
@@ -147,7 +147,7 @@ Unfortunately you can't use the Alpha Vantage demo API key for json data, if you
 
 JSON data really convenient in one way, you can simply view it on your browser like so:
 
-![Microsoft stock data JSON format viewed in Chrome](/content/images/2017/08/Microsoft-stock-data-JSON-format.png)
+![Microsoft stock data JSON format viewed in Chrome](content/images/2017/08/Microsoft-stock-data-JSON-format.png)
 
 ## Creating the web server
 
@@ -320,7 +320,7 @@ A [simple moving average (SMA)](https://en.wikipedia.org/wiki/Moving_average#Sim
 
 The SMA function produces a DataForge Series that we can also added to our chart producing the red line shown below:
 
-![](/content/images/2017/08/SMA_annotated.png)
+![](content/images/2017/08/SMA_annotated.png)
 
 As you can see the red line follows the stock prices but eliminates the day to day fluctuations, as such it eliminates noise and can be used to understand the direction of the market.
 

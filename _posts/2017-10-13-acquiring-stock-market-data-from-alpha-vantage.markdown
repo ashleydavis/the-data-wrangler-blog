@@ -13,7 +13,7 @@ This posts introduces alpha-vantage-cli. I'll show you how to use this tool to d
 
 Here's an example of what the downloaded CSV file looks like:
 
-![Microsoft stock price history](/content/images/2017/10/MSFT-daily.png)
+![Microsoft stock price history](content/images/2017/10/MSFT-daily.png)
 
 # Contents
 
@@ -92,7 +92,7 @@ This downloads to a file named *MSFT-intraday.csv*.
 
 Intraday data looks similar to daily data:
 
-![Microsoft intraday stock history](/content/images/2017/10/MSFT-intraday.png)
+![Microsoft intraday stock history](content/images/2017/10/MSFT-intraday.png)
 
 Notice the difference in the timestamp between daily and intraday data.
 

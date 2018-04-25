@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Linear regression
-image: "/content/images/2017/02/Cover.png"
+image: "content/images/2017/02/Cover.png"
 date: '2017-02-12 22:51:58'
 permalink: linear-regression
 ---
@@ -64,7 +64,7 @@ With linear regression we take a series of data points and fit them to a linear 
 
 This is what I am aiming at in this post (computed for ASX 200 index):
 
-![](/content/images/2017/02/Linear_regression.png)
+![](content/images/2017/02/Linear_regression.png)
 
 # The Excel prototype
 
@@ -72,7 +72,7 @@ For the code in this post I take an interesting approach. I've prototyped my sol
 
 I'm using recent stock data for MPL.AX which looks like this:
 
-![](/content/images/2017/02/Excel_1.png)
+![](content/images/2017/02/Excel_1.png)
 
 In the *Linear Trend* and *Slope* columns I'm computing a 20 day linear trend and linear trend slope using Excel formulas. As an example the formula for the slope column looks like this:
 
@@ -82,7 +82,7 @@ The slope function computes the slope of the linear regression line through the 
 
 The nice thing about using Excel is that you can easily create a graph of your data:
 
-![](/content/images/2017/02/MPL_linear_slope_graph_in_Excel.png)
+![](content/images/2017/02/MPL_linear_slope_graph_in_Excel.png)
 
 # Moving to JavaScript
 
@@ -143,7 +143,7 @@ For more on Highstock please see [my earlier blog post](http://www.the-data-wran
 
 This produces a trend line that looks as follows (computed for ASX 200 index):
 
-![](/content/images/2017/02/Trend_line.png)
+![](content/images/2017/02/Trend_line.png)
 
 # Visualize linear regression slope over time
 
@@ -205,7 +205,7 @@ I add this time series as a second Y axis to the chart:
 
 The result looks like this:
 
-![](/content/images/2017/02/Slope_over_time.png)
+![](content/images/2017/02/Slope_over_time.png)
 
 I decided to plot this as a histogram so that I could easily see if the result was positive or negative for any given day on the chart.
 
