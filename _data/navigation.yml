@@ -1,0 +1,7 @@
+- label: Home
+  url: /
+  slug: home
+
+- label: About
+  url: /about
+  slug: about

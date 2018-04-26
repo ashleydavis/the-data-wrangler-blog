@@ -1,0 +1,115 @@
+---
+layout: default
+body_class: post-template
+---
+<header class="main-header post-head {% if page.image %}" style="background-image: url({{page.image}}){% else %}no-cover{% endif %}">
+    <nav class="main-nav {% if page.image %}overlay{% endif %} clearfix">
+        {% if site.logo %}<a class="blog-logo" href="{{site.url}}"><img src="{{site.logo}}" alt="{{site.title}}" /></a>{% endif %}
+        {% if site.navigation %}
+            <a class="menu-button icon-menu" href="#"><span class="word">Menu</span></a>
+        {% endif %}
+    </nav>
+</header>
+
+<main class="content" role="main">
+    <article class="post featured">
+
+        {% include subscribe.html %}
+
+        <br>
+        
+        <header class="post-header">
+            <h1 class="post-title">{{page.title}}</h1>
+            <section class="post-meta">
+                <time class="post-date" datetime="{{page.date | date: "%e %b %Y"}}">{{page.date | date: "%e %b %Y"}}</time>
+            </section>
+        </header>
+
+        <section class="post-content">
+
+            <!-- Go to www.addthis.com/dashboard to customize your tools --> <div class="addthis_inline_follow_toolbox"></div>
+            
+            {{content}}
+        </section>
+
+        <footer class="post-footer">
+
+            {% if page.author.image %}
+            <figure class="author-image">
+                <a class="img" href="{{page.author.url}}" style="background-image: url({{page.author.image}})"><span class="hidden">{{page.author.name}}'s Picture</span></a>
+            </figure>
+            {% endif %}
+
+            <section class="author">
+                <h4><a href="{{url}}">{{page.author.name}}</a></h4>
+
+                {% if page.author.bio %}
+                    <p>{{page.author.bio}}</p>
+                {% else %}
+                    <p>Read <a href="{{page.author.url}}">more posts</a> by this author.</p>
+                {% endif %}
+                <div class="author-meta">
+                    {% if page.author.location %}<span class="author-location icon-location">{{page.author.location}}</span>{% endif %}
+                    {% if page.author.website %}<span class="author-link icon-link"><a href="{{page.author.website}}">{{page.author.website}}</a></span>{% endif %
+                </div>
+            </section>
+
+            <section class="share">
+                <h4>Share this post</h4>
+                <a class="icon-twitter" href="https://twitter.com/intent/tweet?text={{encode page.title}}&amp;url={{page.url absolute="true"}}"
+                    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <span class="hidden">Twitter</span>
+                </a>
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u={{page.url absolute="true"}}"
+                    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <span class="hidden">Facebook</span>
+                </a>
+                <a class="icon-google-plus" href="https://plus.google.com/share?url={{page.url absolute="true"}}"
+                   onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <span class="hidden">Google+</span>
+                </a>
+            </section>
+
+        </footer>
+
+<div id="disqus_thread"></div>
+<script>
+
+var disqus_config = function () {
+this.page.url = '{{url absolute="true"}}';
+this.page.identifier = 'ghost-{{id}}';
+};
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = '//the-data-wrangler.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+    {% include subscribe.html %}
+    
+    </article>
+</main>
+
+<aside class="read-next">
+    {% if page.next %}
+    <a class="read-next-story {% if page.next.image %}" style="background-image: url({{page.next.image}}){% else %}no-cover{% endif %}" href="{{page.next.url}}">
+        <section class="post">
+            <h2>{{page.next.title}}</h2>
+            <p>{{page.next.excerpt}}&hellip;</p>
+        </section>
+    </a>
+    {% endif %}
+    
+    {% if page.previous %}
+    <a class="read-next-story prev {% if page.previous.image %}" style="background-image: url({{page.previous.image}}){% else %}no-cover{% endif %}" href="{{page.previous.url}}">
+        <section class="post">
+            <h2>{{page.previous.title}}</h2>
+            <p>{{page.previous.excerpt}}&hellip;</p>
+        </section>
+    </a>
+    {% endif %}
+</aside>
