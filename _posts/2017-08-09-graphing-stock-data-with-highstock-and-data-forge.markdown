@@ -30,8 +30,8 @@ The example code for this post demonstrates the following:
 ## Contents  
 *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
-- [Getting the code](#gettingthecode)
-- [The final product](#thefinalproduct)
+- [Getting the code](#getting-the-code)
+- [The final product](#the-final-product)
 - [Highstock](#highstock)
 - [Data-Forge](#dataforge)
 - [Historical stock data from Alpha Vantage](#historicalstockdatafromalphavantage)
