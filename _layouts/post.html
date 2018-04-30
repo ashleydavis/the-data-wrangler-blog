@@ -2,6 +2,8 @@
 layout: default
 body_class: post-template
 ---
+{% assign author = site.data.authors[page.author] %}
+
 <header class="main-header post-head {% if page.image %}" style="background-image: url({{page.image}}){% else %}no-cover{% endif %}">
     <nav class="main-nav {% if page.image %}overlay{% endif %} clearfix">
         {% if site.logo %}<a class="blog-logo" href="{{site.url}}"><img src="{{site.logo}}" alt="{{site.title}}" /></a>{% endif %}
@@ -34,23 +36,23 @@ body_class: post-template
 
         <footer class="post-footer">
 
-            {% if page.author.image %}
+            {% if author.image %}
             <figure class="author-image">
-                <a class="img" href="{{page.author.url}}" style="background-image: url({{page.author.image}})"><span class="hidden">{{page.author.name}}'s Picture</span></a>
+                <a class="img" href="{{author.url}}" style="background-image: url({{author.image}})"><span class="hidden">{{author.name}}'s Picture</span></a>
             </figure>
             {% endif %}
 
             <section class="author">
-                <h4><a href="{{url}}">{{page.author.name}}</a></h4>
+                <h4><a href="{{url}}">{{author.name}}</a></h4>
 
-                {% if page.author.bio %}
-                    <p>{{page.author.bio}}</p>
+                {% if author.bio %}
+                    <p>{{author.bio}}</p>
                 {% else %}
-                    <p>Read <a href="{{page.author.url}}">more posts</a> by this author.</p>
+                    <p>Read <a href="{{author.url}}">more posts</a> by this author.</p>
                 {% endif %}
                 <div class="author-meta">
-                    {% if page.author.location %}<span class="author-location icon-location">{{page.author.location}}</span>{% endif %}
-                    {% if page.author.website %}<span class="author-link icon-link"><a href="{{page.author.website}}">{{page.author.website}}</a></span>{% endif %
+                    {% if author.location %}<span class="author-location icon-location">{{author.location}}</span>{% endif %}
+                    {% if author.website %}<span class="author-link icon-link"><a href="{{author.website}}">{{author.website}}</a></span>{% endif %
                 </div>
             </section>
 
