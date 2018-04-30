@@ -38,7 +38,7 @@ Did people really think that data analysis couldn't be done in JavaScript?
 
 These are the questions that led me to this book. If you know JavaScript then you probably won't be surprised when I say that I have found that JavaScript is a surprisingly capable language. I feel that JavaScript gives me substantial productivity. For sure, there are problems to be aware of, but all good JavaScript coders are already working with the good parts of the language and avoiding the bad parts.
 
-These days all sorts of complex applications are being written in JavaScript. You already know the language, itÔÇÖs very capable and you use it in production. Staying in JavaScript is going to save you time and effort. So why not also use JavaScript for data wrangling?
+These days all sorts of complex applications are being written in JavaScript. You already know the language, it's very capable and you use it in production. Staying in JavaScript is going to save you time and effort. So why not also use JavaScript for data wrangling?
 
 ## Data Wrangling with JavaScript 
 
