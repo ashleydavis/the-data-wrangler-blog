@@ -5,6 +5,7 @@ featured: true
 image: "content/images/2018/02/Banner-4.png"
 date: '2018-02-01 02:54:10'
 permalink: data-wrangling-with-javascript
+post_class: feature
 ---
 
 I work with JavaScript quite a lot and it shows in this blog, so you won't be surprised to hear that I've been putting together a book that teaches how to do data wrangling in JavaScript.
