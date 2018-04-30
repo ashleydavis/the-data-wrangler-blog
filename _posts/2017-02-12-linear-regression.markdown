@@ -14,14 +14,14 @@ permalink: linear-regression
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
-- [Getting the code](#gettingthecode)
-- [Running the code](#runningthecode)
-- [What is linear regression?](#whatislinearregression)
+- [Getting the code](#getting-the-code)
+- [Running the code](#running-the-code)
+- [What is linear regression?](#what-is-linear-regression)
 - [Screenshot](#screenshot)
-- [The Excel prototype](#theexcelprototype)
-- [Moving to JavaScript](#movingtojavascript)
-- [Adding the trend line to Highstock](#addingthetrendlinetohighstock)
-- [Visualize linear regression slope over time](#visualizelinearregressionslopeovertime)
+- [The Excel prototype](#the-excel-prototype)
+- [Moving to JavaScript](#moving-to-javascript)
+- [Adding the trend line to Highstock](#adding-the-trendline-to-highstock)
+- [Visualize linear regression slope over time](#visualize-linear-regression-slope-over-time)
 - [Conclusion](#conclusion)
 - [Resources](#resources)
 

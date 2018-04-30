@@ -17,15 +17,15 @@ In this first post on *The Data Wrangler* I show how to visualise financial data
 ## Contents
 
 *   [Introduction](#introduction)
-*   [Getting the code](#gettingthecode)
+*   [Getting the code](#getting-the-code)
 *   [Screenshot](#screenshot)
 *   [Highstock](#highstock)
-*   [Pulling data from Yahoo](#pullingdatafromyahoo)
-*   [DIY Yahoo proxy](#diyyahooproxy)
+*   [Pulling data from Yahoo](#pulling-data-from-yahoo)
+*   [DIY Yahoo proxy](#diy-yahoo-proxy)
 *   [Data-Forge](#dataforge)
-*   [Simple moving average](#simplemovingaverage)
-*   [Event handling and resize to fit](#eventhandlingandresizetofit)
-*   [Azure deployment](#azuredeployment)
+*   [Simple moving average](#simple-moving-average)
+*   [Event handling and resize to fit](#event-handling-and-resize-to-fit)
+*   [Azure deployment](#azure-deployment)
 *   [Conclusion](#conclusion)
 *   [Resources](#resources)
 

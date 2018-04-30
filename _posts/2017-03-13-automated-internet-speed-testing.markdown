@@ -18,16 +18,16 @@ Eventually I wrote some code to record and visualize internet performance over t
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
-- [Getting the code](#gettingthecode)
+- [Getting the code](#getting-the-code)
 - [Why?](#why)
 - [Screenshot](#screenshot)
-- [Manually measuring internet speed](#manuallymeasuringinternetspeed)
-- [Gathering the data via JavaScript](#gatheringthedataviajavascript)
-- [Recording the data](#recordingthedata)
-- [Scheduled recording](#scheduledrecording)
-- [Fixing issues with Fast-cli](#fixingissueswithfastcli)
-- [Exposing the data with a REST API](#exposingthedatawitharestapi)
-- [Graphing the data with Flot](#graphingthedatawithflot)
+- [Manually measuring internet speed](#manually-measuring-internet-speed)
+- [Gathering the data via JavaScript](#gathering-the-data-via-javascript)
+- [Recording the data](#recording-the-data)
+- [Scheduled recording](#scheduled-recording)
+- [Fixing issues with Fast-cli](#fixing-issues-with-fast-cli)
+- [Exposing the data with a REST API](#exposing-the-data-with-a-rest-api)
+- [Graphing the data with Flot](#graphing-the-data-with-flot)
 - [Conclusion](#conclusion)
 - [Resources](#resources)
 

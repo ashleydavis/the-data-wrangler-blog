@@ -13,8 +13,6 @@ Welcome to *The Data Wrangler*.
 
 My name is Ashley Davis and this is where I publish articles on working with data. 
 
-Please consider supporting [this blog on Patreon](https://www.patreon.com/thedatawrangler).
-
 I love the quote by Richard Feynman. It's so easy to mislead oneself when you can't *see* the data you are working with. Bringing data to life and being able to see its form and interactions is crucial to understanding. Problems become easy to see with the right sort of visualization and a problem that you can see is a problem that you can solve.
 
 So much of my life seems to depend on data visualization. It could be a construction schedule (in my day job), a financial graph (for watching my investments) or debugging a 3D data set (I develop games, simulations and VR experiences, for that please see [my other blog](http://www.what-could-possibly-go-wrong.com/?utm_source=ash&utm_medium=the-data-wrangler&utm_campaign=the-data-wrangler-about)). Here I talk about data transformation, data visualization and managing large data sets. 

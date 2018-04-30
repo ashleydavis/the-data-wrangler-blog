@@ -14,12 +14,12 @@ permalink: computing-average-true-range
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
-- [Getting the code](#gettingthecode)
-- [Getting the code running](#gettingthecoderunning)
-- [What is average true range?](#whatisaveragetruerange)
+- [Getting the code](#getting-the-code)
+- [Getting the code running](#getting-the-code-running)
+- [What is average true range?](#what-is-average-true-range)
 - [Screenshot](#screenshot)
-- [Computing true range](#computingtruerange)
-- [Generating ATR with Data-Forge](#generatingatrwithdataforge)
+- [Computing true range](#computing-true-range)
+- [Generating ATR with Data-Forge](#generating-atr-with-dataforge)
 - [Resources](#resources)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
