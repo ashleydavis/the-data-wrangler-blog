@@ -14,7 +14,7 @@ Over the past 5 months or so I've rewritten Data-Forge in TypeScript, although o
 
 Data-Forge was born from my frustration in working with data in Python and Pandas. Don't get me wrong though! I won't try to tell you that Python and Pandas are bad in anyway, but it just irked me that I had to rewrite my data handling code in JavaScript so I could then move it to a JavaScript production environment. Besides I just liked JavaScript (well, now TypeScript).
 
-What's next for Data-Forge? There's still more work to be done on Data-Forge itself, but have some related projects that I'm itching to get onto. I'm planning to release my extensive library of financial indicators that I use for backtesting stock trading strategies. I'm also planning to build an add-on charting library (on top of D3 of course) that will work from either the browser or from Node.js. This is going to make it so much easier to do ad-hoc exploratory data analysis under Node.js! So please stay tuned.
+What's next for Data-Forge? There's still more work to be done on Data-Forge itself, but I also have some related projects that I'm itching to get onto. I'm planning to release my extensive library of financial indicators that I use for backtesting stock trading strategies. I'm also planning to build an add-on charting library (on top of D3 of course) that will work from either the browser or from Node.js. This is going to make it so much easier to do ad-hoc exploratory data analysis under Node.js! So please stay tuned.
 
 You can find Data-Forge on [npm](https://www.npmjs.com/package/data-forge) and [Github](https://github.com/data-forge/data-forge-ts).
 
