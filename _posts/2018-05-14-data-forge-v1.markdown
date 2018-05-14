@@ -16,6 +16,8 @@ Data-Forge was born from my frustration in working with data in Python and Panda
 
 What's next for Data-Forge? There's still more work to be done on Data-Forge itself, but I also have some related projects that I'm itching to get onto. I'm planning to release my extensive library of financial indicators that I use for backtesting stock trading strategies. I'm also planning to build an add-on charting library (on top of D3 of course) that will work from either the browser or from Node.js. This is going to make it so much easier to do ad-hoc exploratory data analysis under Node.js! So please stay tuned.
 
-You can find Data-Forge on [npm](https://www.npmjs.com/package/data-forge) and [Github](https://github.com/data-forge/data-forge-ts).
+You can find Data-Forge on [npm](https://www.npmjs.com/package/data-forge).
+
+Please make sure you start the [Github](https://github.com/data-forge/data-forge-ts) repo!
 
 I'll soon be writing an introductory blog post on how to get started with Data-Forge, for now though you can take a look at the example in the [readme](https://github.com/data-forge/data-forge-ts), read [the Data-Forge guide](https://github.com/data-forge/data-forge-ts/blob/master/docs/guide.md) or browse [the API docs](https://data-forge.github.io/data-forge-ts/).
