@@ -2,6 +2,7 @@
 layout: post
 title: 'Data-Forge v1 is away!'
 date: '2018-05-14 12:30:00'
+post_class: feature
 ---
 
 I have some big news. I've just published Data-Forge version 1 to npm! After over 2.5 years, 1,148 commits and 2 Github repositories it's finally here, and now rewritten in TypeScript no less! This software has been in gestation for sometime.
