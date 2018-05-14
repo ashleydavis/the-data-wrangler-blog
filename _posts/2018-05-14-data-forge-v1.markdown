@@ -2,6 +2,7 @@
 layout: post
 title: 'Data-Forge v1 is away!'
 date: '2018-05-14 12:30:00'
+permalink: data-forge-v1-launch
 post_class: feature
 ---
 
