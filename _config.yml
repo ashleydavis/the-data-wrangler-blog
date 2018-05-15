@@ -18,7 +18,7 @@ email: ashley@codecapers.com.au
 description: >- # this means to ignore newlines until "baseurl:"
   Writings on data analysis, transformation and visualisation.
 baseurl: "/" # the subpath of your site, e.g. /blog
-url: "https://www.the-data-wrangler.com" # the base hostname & protocol for your site, e.g. http://example.com
+url: "http://www.the-data-wrangler.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: ashleydavis75
 github_username:  ashleydavis
 logo: "content/images/2016/12/Code-Capers_logos_sienna_lge---Copy.png"
