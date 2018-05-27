@@ -6,6 +6,7 @@ image: "content/images/2018/02/Banner-4.png"
 date: '2018-04-29 22:46:00'
 permalink: data-wrangling-with-javascript-ebook-raffle
 post_class: feature
+disqus_id: ghost-12
 ---
 
 The early access program (MEAP) for my book [Data Wrangling with JavaScript](http://bit.ly/2t2cJu2) was updated last week! The first 7 chapter are now available, with more chapters to come.

@@ -4,6 +4,7 @@ title: Graphing stock data with Highstock and Data-Forge
 image: "content/images/2017/08/Post_image-2.png"
 date: '2017-08-09 19:00:00'
 permalink: graphing-stock-data-with-highstock-and-data-forge
+disqus_id: ghost-8
 ---
 
 This is a revisit with various improvements to my [original post on *The Data Wrangler*](http://www.the-data-wrangler.com/highstock-data-forge-yahoo/). In this post I show how to visualise stock data using Data-Forge and Highstock. I also demonstrate how to apply a *simple moving average* to the price data.

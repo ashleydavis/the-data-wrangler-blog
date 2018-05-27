@@ -4,6 +4,7 @@ title: Intraday price alert
 image: "content/images/2017/05/QAN_start-1.png"
 date: '2017-05-11 23:52:32'
 permalink: intraday-price-alert
+disqus_id: ghost-7
 ---
 
 Are you interested in stock trading but don't have time to watch prices all day? Why stare at the screen for hours on end when you can automate this kind of thing. This post talks about a small app I created to continuously and automatically detect when the price of particular companies have risen to specified levels.

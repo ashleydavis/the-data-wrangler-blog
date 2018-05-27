@@ -4,6 +4,7 @@ title: Node.js chart rendering with C3 and Nightmare
 image: "content/images/2017/12/equity-4.png"
 date: '2017-12-22 22:06:24'
 permalink: node-js-chart-rendering-with-c3-and-nightmare
+disqus_id: ghost-10
 ---
 
 I've been doing a lot of data analysis in JavaScript. It makes sense for me to work in JavaScript, because I already use it and that's where my visualizations normally end up. JavaScript has a very rich ecosystem of visualization libraries so that's not surprising. All these visualization libraries are browser based... which is great if that's where you want your visualization to be. It's not so great if you just want to render a chart to an image, say to store for later or to include in some kind of report.
