@@ -2,7 +2,7 @@
 layout: post
 title: About
 date: '2016-09-12 03:57:00'
-permalink: about
+permalink: about/
 disqus_id: ghost-2
 ---
 

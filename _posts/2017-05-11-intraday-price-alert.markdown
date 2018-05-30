@@ -3,7 +3,7 @@ layout: post
 title: Intraday price alert
 image: "content/images/2017/05/QAN_start-1.png"
 date: '2017-05-11 23:52:32'
-permalink: intraday-price-alert
+permalink: intraday-price-alert/
 disqus_id: ghost-7
 ---
 

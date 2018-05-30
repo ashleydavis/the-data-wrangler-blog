@@ -3,7 +3,7 @@ layout: post
 title: Node.js chart rendering with C3 and Nightmare
 image: "content/images/2017/12/equity-4.png"
 date: '2017-12-22 22:06:24'
-permalink: node-js-chart-rendering-with-c3-and-nightmare
+permalink: node-js-chart-rendering-with-c3-and-nightmare/
 disqus_id: ghost-10
 ---
 

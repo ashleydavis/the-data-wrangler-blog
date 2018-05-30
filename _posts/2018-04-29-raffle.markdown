@@ -4,7 +4,7 @@ title: 'Data Wrangling with JavaScript update: Free copy of the ebook up for gra
 featured: true
 image: "content/images/2018/02/Banner-4.png"
 date: '2018-04-29 22:46:00'
-permalink: data-wrangling-with-javascript-ebook-raffle
+permalink: data-wrangling-with-javascript-ebook-raffle/
 post_class: feature
 disqus_id: ghost-12
 ---

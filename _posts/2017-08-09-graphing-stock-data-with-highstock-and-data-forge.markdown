@@ -3,7 +3,7 @@ layout: post
 title: Graphing stock data with Highstock and Data-Forge
 image: "content/images/2017/08/Post_image-2.png"
 date: '2017-08-09 19:00:00'
-permalink: graphing-stock-data-with-highstock-and-data-forge
+permalink: graphing-stock-data-with-highstock-and-data-forge/
 disqus_id: ghost-8
 ---
 

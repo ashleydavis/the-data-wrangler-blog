@@ -4,7 +4,7 @@ title: 'I''m writing a book: Data Wrangling with JavaScript!'
 featured: true
 image: "content/images/2018/02/Banner-4.png"
 date: '2018-02-01 02:54:10'
-permalink: data-wrangling-with-javascript
+permalink: data-wrangling-with-javascript/
 post_class: feature
 disqus_id: ghost-11
 ---

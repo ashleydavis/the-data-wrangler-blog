@@ -3,7 +3,7 @@ layout: post
 title: Average true range
 image: "content/images/2017/02/ATR.png"
 date: '2017-01-13 03:18:40'
-permalink: computing-average-true-range
+permalink: computing-average-true-range/
 disqus_id: ghost-4
 ---
 

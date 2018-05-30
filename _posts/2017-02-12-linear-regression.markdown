@@ -3,7 +3,7 @@ layout: post
 title: Linear regression
 image: "content/images/2017/02/Cover.png"
 date: '2017-02-12 22:51:58'
-permalink: linear-regression
+permalink: linear-regression/
 disqus_id: ghost-5
 ---
 

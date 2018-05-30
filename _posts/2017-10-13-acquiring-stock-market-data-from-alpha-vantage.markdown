@@ -2,7 +2,7 @@
 layout: post
 title: Acquiring stock market data from Alpha Vantage
 date: '2017-10-13 03:24:20'
-permalink: acquiring-stock-market-data-from-alpha-vantage
+permalink: acquiring-stock-market-data-from-alpha-vantage/
 disqus_id: ghost-9
 ---
 

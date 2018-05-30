@@ -3,7 +3,7 @@ layout: post
 title: Highstock + Data-Forge + Yahoo
 image: "content/images/2016/12/screenshot.png"
 date: '2016-12-10 01:41:00'
-permalink: highstock-data-forge-yahoo
+permalink: highstock-data-forge-yahoo/
 disqus_id: ghost-3
 ---
 
