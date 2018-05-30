@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Automated internet speed testing
-image: "content/images/2017/03/Cover-1.png"
+image: "/content/images/2017/03/Cover-1.png"
 date: '2017-03-13 05:58:20'
 permalink: automated-internet-speed-testing/
 disqus_id: ghost-6
@@ -54,7 +54,7 @@ However I still regularly get periods of bad performance (less than 1 Mpbs) and 
 
 This screenshot shows what I'm aiming at:
 
-![](content/images/2017/03/Graph.png)
+![](/content/images/2017/03/Graph.png)
 
 This graph that shows average internet performance over time. The X axis is time. The Y axis is Megabits per second (Mbps).
 
@@ -64,7 +64,7 @@ The first step when automating this kind of thing is to do it manually at least 
 
 So I go to [Fast.com](https://fast.com/) and measure my current internet speed:
 
-![](content/images/2017/03/Fast_com.png)
+![](/content/images/2017/03/Fast_com.png)
 
 Hmm... looks like I'm experiencing rotten internet speed right at this moment! 
 
@@ -110,7 +110,7 @@ You can see that the script is retrieving multiple readings of my internet speed
 
 I need to record the data somewhere so I choose to output to a CSV file: internet-speed-log.csv.
 
-![](content/images/2017/03/Output_CSV_file.png)
+![](/content/images/2017/03/Output_CSV_file.png)
 
 CSV is convenient because you can simply load it up in Excel to view it and make your own charts.
 
@@ -190,7 +190,7 @@ The CSV file is deserialized with the awesome [Papa Parse](http://papaparse.com/
 
 Before attempting to graph the data I test it with [Postman](https://www.getpostman.com/):
 
-![](content/images/2017/03/Postman.png)
+![](/content/images/2017/03/Postman.png)
 
 # Graphing the data with Flot
 
@@ -244,7 +244,7 @@ In the JavaScript code for the webpage I use HTTP GET to retreive the internet s
 
 Final result, this is my internet speed on the day I publish this post:
 
-![](content/images/2017/03/Internet_speed-1.png)
+![](/content/images/2017/03/Internet_speed-1.png)
 
 # Conclusion
 

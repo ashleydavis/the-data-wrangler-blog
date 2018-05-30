@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Intraday price alert
-image: "content/images/2017/05/QAN_start-1.png"
+image: "/content/images/2017/05/QAN_start-1.png"
 date: '2017-05-11 23:52:32'
 permalink: intraday-price-alert/
 disqus_id: ghost-7
@@ -60,7 +60,7 @@ On the morning of the 4th of May (May the 4th be with you), prior to market open
 
 Yesterday's closing price for QAN was $4.36 and for SVW it was $11.26. I input these companies and price levels into my alert list as follows:
 
-![](content/images/2017/05/Alert_list.png)
+![](/content/images/2017/05/Alert_list.png)
 
 Not long after the market opens, my red siren goes off:
 
@@ -68,21 +68,21 @@ Not long after the market opens, my red siren goes off:
 
 I also receive the following email alert:
 
-![](content/images/2017/05/Qan_notification-1.png)
+![](/content/images/2017/05/Qan_notification-1.png)
 
 Qantas has very quickly broken through yesterday's close, so I kick into gear and buy it!
 
-![](content/images/2017/05/QAN_start.png)
+![](/content/images/2017/05/QAN_start.png)
 
 I received no price alert for SVN. By the end of the day it still hasn't broken through yesterday's close.
 
-![](content/images/2017/05/SVW_end.png)
+![](/content/images/2017/05/SVW_end.png)
 
 # Loading the alert list
 
 The app's input is a spreadsheet of companies and prices saved as *alert-list.csv*:
 
-![](content/images/2017/05/Alert_list-1.png)
+![](/content/images/2017/05/Alert_list-1.png)
 
 [Data-Forge](http://www.data-forge-js.com/) makes short work of loading and parsing the CSV file:
 

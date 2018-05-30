@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Node.js chart rendering with C3 and Nightmare
-image: "content/images/2017/12/equity-4.png"
+image: "/content/images/2017/12/equity-4.png"
 date: '2017-12-22 22:06:24'
 permalink: node-js-chart-rendering-with-c3-and-nightmare/
 disqus_id: ghost-10
@@ -13,7 +13,7 @@ I wanted to be able to render charts from the command line. I wanted to be able 
 
 Please read on to learn how I render charts and other visualizations using C3 and Nightmare.
 
-![Screenshot of a chart rendered in Node.js](content/images/2017/12/equity.png)
+![Screenshot of a chart rendered in Node.js](/content/images/2017/12/equity.png)
 
 # Getting the code
 
@@ -41,11 +41,11 @@ I'll explain how the code behind this works soon, for the moment I'll show you h
 
 Let's say that we have some statistics on the performance of a stock trading strategy and we want to render this as a chart. This kind of chart is called an equity curve:
 
-![Equity curve chart](content/images/2017/12/equity-1.png)
+![Equity curve chart](/content/images/2017/12/equity-1.png)
 
 The Github repo contains some sample input data, you will find the CSV file *example-data.csv* in the *data* sub-directory. This data is output from a [backtest](https://www.investopedia.com/terms/b/backtesting.asp) that I ran for a particular trading strategy, it should look something like this:
 
-![Screenshot of example data](content/images/2017/12/Example_data.png)
+![Screenshot of example data](/content/images/2017/12/Example_data.png)
 
 We are going to  pull the `EquityPct` and `ComparisonIndexPct` columns out of this CSV file and graph them so that we can compare the trading strategy's [equity curve](https://www.investopedia.com/terms/e/equity-curve.asp) to a comparison index (in this case the [S&P ASX 200](https://en.wikipedia.org/wiki/S%26P/ASX_200)).
 
@@ -129,7 +129,7 @@ The first argument is the name of the input CSV file. The `--chart` argument spe
 
 Run this command and your chart will be rendered as follows:
 
-![Equity curve chart](content/images/2017/12/equity-5.png)
+![Equity curve chart](/content/images/2017/12/equity-5.png)
 
 ## JavaScript usage:
 

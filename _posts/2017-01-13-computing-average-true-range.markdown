@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Average true range
-image: "content/images/2017/02/ATR.png"
+image: "/content/images/2017/02/ATR.png"
 date: '2017-01-13 03:18:40'
 permalink: computing-average-true-range/
 disqus_id: ghost-4
@@ -60,7 +60,7 @@ Average true range is an [indicator](http://www.investopedia.com/terms/t/technic
 
 This is what the end result of this post looks like:
 
-![Screenshot](content/images/2017/01/Screenshot.png)
+![Screenshot](/content/images/2017/01/Screenshot.png)
 
 # Computing true range
 
