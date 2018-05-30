@@ -7,6 +7,7 @@ post_class: feature
 disqus_id: data-forge-v1-launch/
 ---
 
+test
 I have some big news. I've just published Data-Forge version 1 to npm! After over 2.5 years, 1,148 commits and 2 Github repositories it's finally here, and now rewritten in TypeScript no less! This software has been in gestation for sometime.
 
 Data-Forge is my open-source JavaScript data-wrangling and analysis toolkit that was inspired by Pandas and LINQ. I use it for all manner of data-wrangling tasks. I've used it when working on SQL and MongoDB databases, creating reports, backtesting and algo stock trading. I've put it in web apps, server backends, (JavaScript-based) mobile apps. It's my goto tool for slicing and dicing data.
