@@ -19,15 +19,15 @@ Please allow me to introduce my newest open-source library: [Data-Forge Plot](ht
 **How simple is it?** See for yourself, load a CSV file and render a chart like this:
 
     const dataFrame = await dataForge.readFile("my-data.csv").asCSV();
-    await dataFrame.plot.renderImage("my-chart.png");
+    await dataFrame.plot().renderImage("my-chart.png");
 
-Wow! Thats one line of code to load the data file and other to plot and render the chart to an image! Has it ever been so easy to produce a nice looking chart from a CSV file.
+Wow! Thats one line of code to load the data file and another to plot and render the chart to an image! Has it ever been so easy to produce a nice looking chart from a CSV file.
 
 It's also simple to export an interactive web-visualization that you can then host under a web-server of you choice:
 
     await dataFrame.plot().exportWeb("my-web-vis");
 
-Data-Forge Plot works with [Data-Forge](https://www.npmjs.com/package/data-forge) and makes it super easy for you to get your data into a chart with minimal fuss with little to no configuration. Please read on to learn more about this exciting new API.
+Data-Forge Plot works with [Data-Forge](https://www.npmjs.com/package/data-forge) and makes it easy for you to get your data into a chart with minimal fuss with little to no configuration. Please read on to learn more about this exciting new API.
 
 It's early days for Data-Forge Plot - it's no where near complete. It's basically now at the proof of concept stage, but already it is very functional, very useful and you can try it for yourself. I'm using this blog post not only to announce Data-Forge Plot, but also to ask you to give feedback. 
 
@@ -40,8 +40,8 @@ Before we get into the good stuff, I need to more fully explain why I've built D
 These are my reasons:
 
 - I needed an API to help power my data analysis and exploratory coding in Node.js. Data-Forge + Data-Forge Plot make for a powerful data analysis combination.
-- I need a charting library where I where I can separate the *chart definition*, the *data* and the *axis map* (which I'll explain later). In some of my apps I need to have a library of charts that I can reuse and keeping the different aspects of chart configuration separate has helped me reuse charts with different data.
-- Simplicity. I need an API that can create nice looking charts quickly, with minimal fuss and little to no configuration. I need to keep the cost of experimentation in my prototyping as low as possible.
+- I need a charting library where I can separate the *chart definition*, the *data* and the *axis map* (which I'll explain later). In some of my apps I need to have a library of charts that I can reuse and keeping the different aspects of chart configuration separate has helped me reuse charts with different data.
+- Simplicity. I like to do fast paced prototyping, so I need an API that can create nice looking charts quickly. 
 - Flexibility. Although I want to start quickly and simply I also want to be able to configure and tweak the chart when that's necessary.
 - Although I love fluent APIs, there are also plenty of situations where I'd like to be able to instantiate a chart just from a data definition. So Data-Forge Plot has two types of interface: a fluent API that works well with Visual Studio Code intellisense, but charts can also be created from a data configuration. Chart configurations can also be exported after being created with the fluent API. So I can start with the convenience and nice workflow of the fluent API and work towards a data-driven chart (that I can later add to my chart library).
 - It's incredibly useful to be able to render charts on the server-side.
@@ -91,7 +91,7 @@ We might also save the data to a CSV file so we can inspect it separately or reu
 
     await df.asCSV().writeFile("MSFT.csv");
 
-Please be aware that if you trying to get data from Alpha Vantage for companies other than Microsoft then you'll have to use your own API key. It's a free service and you can [sign up here](https://www.alphavantage.co/support/#api-key).
+Please be aware that if you are trying to get data from Alpha Vantage for companies other than Microsoft then you'll have to use your own API key. It's a free service and you can [sign up here](https://www.alphavantage.co/support/#api-key).
 
 ### Plotting a default chart
 
@@ -106,26 +106,22 @@ Now let's reverse the dataframe (putting it in forward chronological order), ind
     const indexedDf = chronoOrder.setIndex("timestamp"); // Use the date as the index of the dataframe.
     const close = indexedDf.getSeries("close"); // Extract the closing price time series.
 	
-Indexing our dataframe serves two purposes. Firstly when we plot it a moment the index will automatically serve as the x axis for the chart. In addition we need to index to merge data, something we'll need soon.
+Indexing our dataframe serves two purposes. Firstly when we plot it in a moment the index will automatically serve as the x axis for the chart. In addition we need to index to merge data, something we'll need soon.
 
 Now we are ready to plot our chart. Let's plot the closing price time series and render the chart to a PNG file:
  
     await close.plot().renderImage("./MSFT-close.png");
 
-The `plot` function returns the plotting API. This is a fluent API that we can use to configure the chart. In this case we are just using the default chart configuration though and calling `renderImage` to rendering the chart to an image. Here's one I prepared earlier:
+The `plot` function returns the plotting API. This is a fluent API that we can use to configure the chart. In this case though we are just using the default chart configuration and calling `renderImage` to render the chart to an image. Here's one I prepared earlier:
 
 ![](/content/images/2018/06/MSFT-close.png)
 
 We called `plot` with no parameters and we didn't have to do any tedious configuration to produce the chart. Nice!
 
-We can make an improvement to this chart though. When we extacted the *close* series from the dataframe we lost the name of the column. That's why the chart has default to *__value__* as the series name. Let's correct the chart configuration and render the chart again: 
+Actually, that's not quite the truth, to render that chart I did make a small tweak. When we extacted the *close* series from the dataframe we lost the name of the column. So I've had to manually set a label for the axis, here's the modified code:
 
     const plot = close.plot({}, { series: { close: "Microsoft Close" }});
     await plot.renderImage("./MSFT-close.png");
-
-That looks a bit better:
-
-TODO: screenshot.
 
 ### Computing and plotting a simple moving average
 
@@ -135,7 +131,7 @@ We'll compute the moving average with the `sma` function from my other new *work
 
     const sma = close.sma(30); // Compute a 30 day simple moving average.
 
-Again we printed the result to the console so we can inspect the result and check that the moving average was computed as we expected:
+Again we print the result to the console so we can inspect the result and check that the moving average was computed as expected:
 
     SMA:                        
     __index__  __value__        
@@ -148,11 +144,7 @@ Again we printed the result to the console so we can inspect the result and chec
 
 It's looking good!
 
-Now we want to merge the SMA series into the original dataframe so we can plot the SMA against the stock's closing price. 
-
-    const sma = close.sma(30); // Compute SMA from closing prices.
-
-Now we can merge the orginal dataframe and the SMA. This merging works out because we indexed our dataframe earlier.
+Now we can merge the orginal dataframe and the SMA. This merging works because we indexed our dataframe earlier:
 
     const merged = indexedDf.withSeries({ SMA: sma }); // Merge the sma into the original data.
 
@@ -174,21 +166,21 @@ Now that we have our merged data set, let's plot a chart with multiple series:
     const plot = merged.plot({}, { y: ["close", "SMA"] });
     await plot.renderImage("./MSFT-sma.png", { openImage: true });
 
-Now we are passing some inputs to the `plot` function to configure it. Specifially we are telling it which columns in the dataframe to include in the y axis. If we didn't do this, all the columns would automatically be included (and that would make for a messy chart). This is your first taste of data-driven chart configuration.
+Here we are passing some inputs to the `plot` function to configure it. Specifially we are telling it which columns in the dataframe to include in the y axis. If we didn't do this, all the columns would automatically be included (and that would make for a messy chart). This is your first taste of data-driven chart configuration.
 
-Note also the configuration passed to the `renderImage` function and how the `openImage` field is set to `true`. This is a small convenience that automatically opens the rendered imaged in your default image viewer. Run the code and the chart pops up in front of your. Small automations like this help streamline your workflow and makes it faster for you to iterate on your ideas.
+Check out the configuration passed to the `renderImage` function and how the `openImage` field is set to `true`. This is a small convenience that automatically opens the rendered imaged in your default image viewer. Run the code and the chart pops up in front of you. Small automations like this help streamline your workflow and makes your iterations a little bit faster.
 
-Now we have rendered our chart with both the closing price and the moving average we computed:
+Here's the rendered chart with both the closing price and the moving average:
 
 ![](/content/images/2018/06/MSFT-sma.png)
 
 ### Exporting an interactive web visualization
 
-We don't just have to render static images. We can also export an interactive web visualization, we just need to adjust our code slightly:
+We aren't just stuck with static rendered images. We can also export an interactive web visualization, we just need to adjust our code slightly:
 
     await plot.exportWeb("./test-export", { openBrowser: true });
 
-Note the configuration and the `openBrowser` field, this exports a web visualization for the chart and then automatically opens our browser to view it! Here's an interactive visualization I exported earlier and then embedded in this page using an iframe:
+Here we pass in configuration and use the `openBrowser` field to automatically open the exported web visualization in our browser! Here's an interactive visualization I exported earlier and then embedded in this page using an iframe:
 
 <iframe width="650" height="250" frameborder="0" src="/content/web-export/index.html" style="display:block; margin: 0 auto;">&nbsp;</iframe>
 
@@ -200,11 +192,11 @@ We can also export a Node.js project to host our web visualization!
 
     await plot.exportNodejs("./test-export-nodejs");
 
-The end result is a Node.js project with a simple web-server to host our interactive visualization and a built-in REST API to host our data. Either the exported web visualization or the exported Node.js project can be a great starting point for you to build on to create a more sophisticated visualization.
+The end result is a Node.js project with a simple web-server to host our interactive visualization and a built-in REST API to serve our data. Either the exported web visualization or the exported Node.js project can be a great starting point for you to build on to create a more sophisticated visualization.
 
 ## Configuring your chart
 
-We can configure our charts by passing configuration to the `plot` function or we can configure using the fluent API that is returned by the `plot` function.
+We can configure our charts either by passing configuration to the `plot` function or using the fluent API that is returned by the `plot` function.
 
 ### Data-driven chart configuration
 
@@ -226,7 +218,7 @@ Let's now see an example of configuring the chart through data:
 
 In this example we are passing two configuration objects to the `plot` function. The first is the *chart definition*. Here we can set the dimensions of the chart and provide other configuration such as the type of chart (line, bar, etc). 
 
-The second configuration object passed to the `plot` function is what I call the *axis map* (for want of a better name). This maps your data series to the axis' on which they should be rendered in the chart.
+The second configuration object passed to the `plot` function is what I call the *axis map* (for want of a better name). This maps each data series to the axis' on which it should be rendered in the chart.
 
 Keeping the data, the chart definition and axis map separate makes it easier to reuse charts. For example you might want to reuse your chart definition and plug in different structured data. Or maybe even reuse the chart definition and the axis map, but plug in new data that has the same structure. The separation of data and configuration means we can maintain a library of resuable charts.
 
@@ -256,7 +248,7 @@ After using the fluent API to prototype your chart you might then want to export
 
 Data-Forge Plot builds on my previous work in server-side rendering that [I've blogged about on CSS Tricks](https://css-tricks.com/server-side-visualization-with-nightmare/). I've also dedicated a whole chapter to this technique in my book [Data Wrangling with JavaScript](http://bit.ly/2t2cJu2), that's how important I think it is.
 
-Under the hood Data-Flot Plot uses the [C3](http://c3js.org/) charting library to do the actual visualization. I really like C3 and that's why it's my first port of call when building Data-Forge Plot. However in the future I'd also like to support other charting libraries...
+Under the hood Data-Forge Plot uses the [C3](http://c3js.org/) charting library to do the actual visualization. I really like C3 and that's why it's my first port of call when building Data-Forge Plot. However in the future I'd also like to support other charting libraries...
 
 ## What does the future hold?
 
