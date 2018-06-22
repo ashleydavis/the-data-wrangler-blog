@@ -23,11 +23,11 @@ Please allow me to introduce my newest open-source library: [Data-Forge Plot](ht
 
 Wow! Thats one line of code to load the data file and another to plot and render the chart to an image! Has it ever been so easy to produce a nice looking chart from a CSV file.
 
-It's also simple to export an interactive web-visualization that you can then host under a web-server of you choice:
+It's also simple to export an interactive web-visualization that you can then host under a web-server of your choice:
 
     await dataFrame.plot().exportWeb("my-web-vis");
 
-Data-Forge Plot works with [Data-Forge](https://www.npmjs.com/package/data-forge) and makes it easy for you to get your data into a chart with minimal fuss with little to no configuration. Please read on to learn more about this exciting new API.
+Data-Forge Plot works with [Data-Forge](https://www.npmjs.com/package/data-forge) and makes it easy for you to get your data into a chart with minimal fuss and with little to no configuration. Please read on to learn more about this exciting new API.
 
 It's early days for Data-Forge Plot - it's no where near complete. It's basically now at the proof of concept stage, but already it is very functional, very useful and you can try it for yourself. I'm using this blog post not only to announce Data-Forge Plot, but also to ask you to give feedback. 
 
@@ -46,7 +46,7 @@ These are my reasons:
 - Although I love fluent APIs, there are also plenty of situations where I'd like to be able to instantiate a chart just from a data definition. So Data-Forge Plot has two types of interface: a fluent API that works well with Visual Studio Code intellisense, but charts can also be created from a data configuration. Chart configurations can also be exported after being created with the fluent API. So I can start with the convenience and nice workflow of the fluent API and work towards a data-driven chart (that I can later add to my chart library).
 - It's incredibly useful to be able to render charts on the server-side.
 
-It's important to note that I'm not just reinventing the wheel here. What I'm doing is building on the work of others, integrating it with Data-Forge and building an API that is hopefully more friendly to use and fulfills the needs of those wanting to do their data analysis in JavaScript.
+It's important to note that I'm not just reinventing the wheel here. What I'm doing is building on the work of others, integrating it with Data-Forge and building an API that is hopefully friendly to use and fulfills the needs of those wanting to do their data analysis in JavaScript.
 
 ## Getting the example code
 
@@ -67,7 +67,8 @@ First we need to get our data. We'll use the Alpha Vantage demo API key and get 
     const url = "https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=MSFT&apikey=demo&datatype=csv";
 
     const response = await request(url); // Request the data from Alpha Vantage.
-    const df = dataForge.fromCSV(response, { dynamicTyping: true }) // Deserialize CSV data.
+    const df = dataForge
+        .fromCSV(response, { dynamicTyping: true }) // Deserialize CSV data.
         .parseDates("timestamp", "YYYY-MM-DD"); // Parse dates from strings.
 
     console.log("Retreived:");
@@ -103,8 +104,12 @@ Now that we have some data to play with let's make a chart. Data-Forge Plot is a
 Now let's reverse the dataframe (putting it in forward chronological order), index the dataframe and then extract the closing price time series from the dataframe:
 
     const chronoOrder = df.reverse();
-    const indexedDf = chronoOrder.setIndex("timestamp"); // Use the date as the index of the dataframe.
-    const close = indexedDf.getSeries("close"); // Extract the closing price time series.
+
+    // Use the date as the index of the dataframe.
+    const indexedDf = chronoOrder.setIndex("timestamp"); 
+
+    // Extract the closing price time series.
+    const close = indexedDf.getSeries("close"); 
 	
 Indexing our dataframe serves two purposes. Firstly when we plot it in a moment the index will automatically serve as the x axis for the chart. In addition we need to index to merge data, something we'll need soon.
 
@@ -146,7 +151,8 @@ It's looking good!
 
 Now we can merge the orginal dataframe and the SMA. This merging works because we indexed our dataframe earlier:
 
-    const merged = indexedDf.withSeries({ SMA: sma }); // Merge the sma into the original data.
+    // Merge the sma into the original data.
+    const merged = indexedDf.withSeries({ SMA: sma }); 
 
 Again we output a sample of the merged data to check that all is well:
 
@@ -166,9 +172,9 @@ Now that we have our merged data set, let's plot a chart with multiple series:
     const plot = merged.plot({}, { y: ["close", "SMA"] });
     await plot.renderImage("./MSFT-sma.png", { openImage: true });
 
-Here we are passing some inputs to the `plot` function to configure it. Specifially we are telling it which columns in the dataframe to include in the y axis. If we didn't do this, all the columns would automatically be included (and that would make for a messy chart). This is your first taste of data-driven chart configuration.
+Here we are passing some inputs to the `plot` function to configure it. Specifially we are telling it which columns in the dataframe to include in the y axis. If we didn't do this, all the columns would automatically be included (and that would make for a messy chart). This is a basic example of data-driven chart configuration.
 
-Check out the configuration passed to the `renderImage` function and how the `openImage` field is set to `true`. This is a small convenience that automatically opens the rendered imaged in your default image viewer. Run the code and the chart pops up in front of you. Small automations like this help streamline your workflow and makes your iterations a little bit faster.
+Check out the configuration passed to the `renderImage` function and how the `openImage` field is set to `true`. This is a small convenience that automatically opens the rendered imaged in your default image viewer. Run the code and the chart pops up in front of you. Small automations like this help streamline your workflow and makes your iterations that little bit faster.
 
 Here's the rendered chart with both the closing price and the moving average:
 
@@ -180,7 +186,7 @@ We aren't just stuck with static rendered images. We can also export an interact
 
     await plot.exportWeb("./test-export", { openBrowser: true });
 
-Here we pass in configuration and use the `openBrowser` field to automatically open the exported web visualization in our browser! Here's an interactive visualization I exported earlier and then embedded in this page using an iframe:
+Here we pass in configuration and use the `openBrowser` field to automatically open the exported web visualization in our browser! Here's an interactive visualization I exported earlier and then embedded in this page using an iframe. Hover your mouse over the chart to see what happens:
 
 <iframe width="650" height="250" frameborder="0" src="/content/web-export/index.html" style="display:block; margin: 0 auto;">&nbsp;</iframe>
 
