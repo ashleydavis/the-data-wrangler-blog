@@ -21,7 +21,7 @@ Hi Athan, this is Ashley.
 Hey, how are you doing?
 
 **Ash:**
-Good mate. Hey thanks for agreeing to talk today about your JavaScript library Stdlib
+Good mate. Hey thanks for agreeing to talk today about your JavaScript library stdlib
 
 **Ash:**
 I'm working on my own data transformation toolkit, that's Data-Forge and I've also written a book called Data Wrangling with JavaScript. So I've been very interested in the JavaScript ecosystem for data transformation, analysis and visualization. But somehow your standard library sort of slipped past me until just a couple of weeks ago, when I noticed through a blog post I found. I thought I'd have a chat to you because I've only just learned about your library and I'm interested to know more about it, where it's come from, where it's going to and that sort of thing. I’m also interested in your background as well understanding how you contribute to the library.
@@ -52,7 +52,7 @@ Yes, that's correct. The longer story is that, when I moved back to the US from 
 That led to some open source work, which I worked on for about 2 years and, through that work, Phillip, who is the main other collaborator on stdlib, began working with me. We wrote well over 1,000 NPM modules that did small little things, such as special functions or Matlab like functionality. Over time our approach was not particularly sustainable. At the time, small modules were the “craze”, and the “everything is its own repository” approach just wasn't scalable for us, as we were investing a lot more time writing tooling to help manage all these packages than actually working on core library functionality. Eventually, we consolidated everything into a mono-repo which was the genesis for stdlib. We've been working on stdlib since March of 2016.
 
 **Ash:**
-Do you have any kind of like relationship with JavaScript committee or with the Node.js foundation? I’m wondering if there is anything in the works there? I guess I’m asking:  will Stdlib be something official?
+Do you have any kind of like relationship with JavaScript committee or with the Node.js foundation? I’m wondering if there is anything in the works there? I guess I’m asking: will stdlib be something official?
 
 **Athan:**
 No, there is nothing official. From our standpoint, no reason exists for official incorporation into either Node.js or JavaScript. There are several reasons for avoiding official incorporation. For the most part, these reasons are detailed in the [FAQ](https://github.com/stdlib-js/stdlib/blob/develop/FAQ.md) found in the repo. So, I'll just briefly highlight some of the reasons. First, some of the concerns of the standards bodies are not our concerns. When the standard committee has thought about math at the standards level, they haven't necessarily prioritised accuracy or precision or having robust algorithms. Instead, they have wanted flexibility in choosing performance over accuracy. If you're doing something like game design or similar, you don't necessarily care that you have 16 decimals of precision. What you do care about is that your code runs relatively fast and that accuracy is good enough for things like trajectories of flying projectiles and angry birds. Forgoing accuracy is not okay, however if you want to be able to do any kind of reproducible scientific research. 
