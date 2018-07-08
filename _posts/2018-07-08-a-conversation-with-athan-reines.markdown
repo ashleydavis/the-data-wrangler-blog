@@ -24,7 +24,7 @@ Hey, how are you doing?
 Good mate. Hey thanks for agreeing to talk today about your JavaScript library stdlib
 
 **Ash:**
-I'm working on my own data transformation toolkit, that's Data-Forge and I've also written a book called Data Wrangling with JavaScript. So I've been very interested in the JavaScript ecosystem for data transformation, analysis and visualization. But somehow your standard library sort of slipped past me until just a couple of weeks ago, when I noticed through a blog post I found. I thought I'd have a chat to you because I've only just learned about your library and I'm interested to know more about it, where it's come from, where it's going to and that sort of thing. I’m also interested in your background as well understanding how you contribute to the library.
+I'm working on my own data transformation toolkit, that's [Data-Forge](http://www.data-forge-js.com/) and I've also written a book called [Data Wrangling with JavaScript](http://bit.ly/2t2cJu2). So I've been very interested in the JavaScript ecosystem for data transformation, analysis and visualization. But somehow your standard library sort of slipped past me until just a couple of weeks ago, when I noticed through a blog post I found. I thought I'd have a chat to you because I've only just learned about your library and I'm interested to know more about it, where it's come from, where it's going to and that sort of thing. I’m also interested in your background as well understanding how you contribute to the library.
 
 **Athan:**
 Okay, where would you like me to begin?
