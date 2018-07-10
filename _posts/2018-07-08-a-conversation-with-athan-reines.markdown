@@ -7,7 +7,7 @@ post_class: feature
 disqus_id: a-conversation-with-athan-reines
 ---
 
-This is the transcript of a conversation I had recently with Athan Reines, co-creator of the JavaScript [stdlib](https://stdlib.io/) library. We talked about why Athan created the library, why he needs to do scientific computing in JavaScript and the difficulties he has encountered. We also discussed the state of data science in the JavaScript ecosystem and how far off we are from equaling Python and what it would take for us to catch up.
+This is the transcript of a conversation I had recently with Athan Reines, co-creator of the JavaScript [stdlib](https://stdlib.io/) library. We talked about why Athan created the library, why he needs to do scientific computing in JavaScript and the difficulties he has encountered. We also discussed the state of data science in the JavaScript ecosystem and how far off we are from equalling Python and what it would take for us to catch up.
 
 Enjoy...
 
