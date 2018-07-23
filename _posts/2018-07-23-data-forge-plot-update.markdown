@@ -7,26 +7,28 @@ post_class: feature
 disqus_id: data-forge-plot-update
 ---
 
-Just a quick update of ny progress on Data-Forge Plot. The API has evolved a little bit and so has my thinking around it. I've also started adding examples and unit tests.
+Just a quick update of my progress developing [Data-Forge Plot](http://www.the-data-wrangler.com/introducing-data-forge-plot/). The API has evolved a little bit and so has my thinking around it. I've also started adding examples and unit tests.
 
 ## Assigning series to axis'
 
-I've simplified and extended the API. One of the big changes is that you can now set an x axis series to corespond to a y axis series. That has allowed me to replicate [the multi-series C3 scatter plot example](https://c3js.org/samples/chart_scatter.html). You can find a [single-series example with Data-Forge Plot here](https://github.com/data-forge/data-forge-plot/blob/master/examples/c3/example-9.ts) and the [multi-series example here](https://github.com/data-forge/data-forge-plot/blob/master/examples/c3/example-10.ts).
+I've simplified and extended the API. One of the big changes is that you can now set an x axis series to correspond to a y axis series. That has allowed me to replicate [the multi-series C3 scatter plot example](https://c3js.org/samples/chart_scatter.html). You can find a [single-series example with Data-Forge Plot here](https://github.com/data-forge/data-forge-plot/blob/master/examples/c3/example-9.ts) and the [multi-series example here](https://github.com/data-forge/data-forge-plot/blob/master/examples/c3/example-10.ts).
 
-Here's some examples of assigning series to axis' using Data-Forge Plot.  The basic setup looks like this:
+Here are some examples of assigning series to axis' using Data-Forge Plot.  The basic setup looks like this:
 
     const df = ... the dataframe containing your dataset ...
     const plot = df.plot({}, { 
         x: "ColumnA", // Assign ColumnA to the x axis
         y: "ColumnB"  // and ColumnB to the y axis.
     });
-    plot.renderImage("my-chart.png); // Render the image, or whatever else you want.
+
+    // Render the image, or whatever else you want.
+    plot.renderImage("my-chart.png"); 
 
 Now Data-Forge Plot already had the ability to plot multiple series to the primary Y axis' like this:
 
     const plot = df.plot({}, {
         x: "ColumnA",
-        y: ["ColumnB", "ColumnC" ]  // Plot multiple series to the Y axis.
+        y: [ "ColumnB", "ColumnC" ]  // Plot multiple series to the Y axis.
     });
 
 You could also plot one or more series on the secondary Y axis as follows:
@@ -37,26 +39,26 @@ You could also plot one or more series on the secondary Y axis as follows:
         y2: "ColumnC"
     });
 
-What's new now is that you can expand the definition of an axis and explicitly assign an x axis series for each y axis series. Here's an example of how I can replicate the [the multi-series C3 scatter plot example](https://c3js.org/samples/chart_scatter.html):    
+What's new now is that you can expand the definition of an axis and explicitly assign an x axis series for each y axis series. Here's an example of how to  replicate the [the multi-series C3 scatter plot example](https://c3js.org/samples/chart_scatter.html) with Data-Forge Plot:
 
     const plot = df.plot({}, {  
         y: [
             {
-                series: "versicolor_y", // Add this series to the Y axis.
-                x: "versicolor_x"       // Set this series as the corresponding X axis.
+                series: "versicolor_y", // The Y axis.
+                x: "versicolor_x"       // The corresponding X axis.
             },
             {
-                series: "setosa_y",     // Another series for the Y axis.
-                x: "setosa_x"           // Another explicit series for the X axis.
+                series: "setosa_y",     // Another Y axis.
+                x: "setosa_x"           // The corresponding X axis.
             }
         ]     
     });
 
-Obviously you can also use any valid combination of these methods of plotting your series to your chart. 
+Obviously you can also use any valid combination of these methods of assigning series to axis'.
 
 ## Moving towards plugin charting libraries
 
-My big vision for Data-Forge Plot is to have the potential of integrating with any JavaScript visualization library with Data-Forge. There are so many visualization and charting libraries for JavaScript why shouldn't you have that choice?
+My big vision for Data-Forge Plot is to have the potential to easily integrate any JavaScript visualization library with Data-Forge. There are so many visualization and charting libraries for JavaScript why shouldn't you have that choice?
 
 To that end I've been prototying a templating mechanism that allows templates for new charting libraries to be added. My intention is to make it easy for others to extend Data-Forge Plot to add support for their favorite charting library. It will also be nice to have a selection of visualization libraries to choose from depending on what you are trying to achieve and which one does the job best for you.
 
