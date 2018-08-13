@@ -8,3 +8,15 @@
 
 - label: The Book
   url: http://bit.ly/2t2cJu2
+
+- label: JavaScript cheat sheet
+  url: /javascript-cheat-sheet
+  slug: javascript-cheat-sheet
+
+- label: Data-Forge cheat sheet
+  url: /dataforge-cheat-sheet
+  slug: dataforge-cheat-sheet
+
+- label: Getting Started with Vagrant 
+  url: /getting-started-with-vagrant
+  slug: getting-started-with-vagrant
