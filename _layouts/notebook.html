@@ -49,5 +49,24 @@
     <script type="text/javascript" src="/assets/js/index.js"></script>
 
     <!-- Go to www.addthis.com/dashboard to customize your tools --> <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-585b298cd5132d48"></script> 
+
+    <script src="/assets/node_modules/d3/dist/d3.js"></script>
+    <script src="/assets/node_modules/c3/c3.js"></script>
+    <script>var require = { paths: { 'vs': './node_modules/monaco-editor/min/vs' } };</script>
+    <script src="/assets/node_modules/monaco-editor/min/vs/loader.js"></script>
+    <script src="/assets/node_modules/monaco-editor/min/vs/editor/editor.main.nls.js"></script>
+    <script src="/assets/node_modules/monaco-editor/min/vs/editor/editor.main.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function(event) { 
+            const els = document.getElementsByClassName("export-code");
+            for (var i = 0; i < els.length; ++i) {
+                monaco.editor.colorizeElement(els[i]);
+            }
+
+            let chartDef;
+
+        });
+    </script>
+
 </body>
 </html>
