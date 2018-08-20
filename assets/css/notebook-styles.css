@@ -34,3 +34,8 @@ webview {
 .center {
     text-align: center;
 }
+
+.notebook {
+    max-width: 800px;
+    margin: 0 auto;
+}
