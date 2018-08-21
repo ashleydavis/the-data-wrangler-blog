@@ -18,7 +18,7 @@ I love the quote by Richard Feynman. It's so easy to mislead oneself when you ca
 
 So much of my life seems to depend on data visualization. It could be a construction schedule (in my day job), a financial graph (for watching my investments) or debugging a 3D data set (I develop games, simulations and VR experiences, for that please see [my other blog](http://www.what-could-possibly-go-wrong.com/?utm_source=ash&utm_medium=the-data-wrangler&utm_campaign=the-data-wrangler-about)). Here I talk about data transformation, data visualization and managing large data sets. 
 
-I'm writing to share my experience of working with data for commercial and open-source projects. I have a strong interest in improving my data processing and visualization toolkit and to help others do the same. For a full background please see [Linkedin](https://www.linkedin.com/in/ashleydavis75).
+I'm writing to share my experience of working with data for commercial and open-source projects. I have a strong interest in improving my data processing and visualization toolkit and to help others do the same. For a full background please see [Linkedin](https://www.linkedin.com/in/ashleydavis75) or [my personal web page](http://www.codecapers.com.au/).
 
 One of my big open source projects has been [Data Forge](http://www.data-forge-js.com/?utm_source=the-data-wrangler&utm_campaign=the-data-wrangler&utm_medium=blog), developed to help me and my team work efficiently and effectively with data. It's a data wrangling toolkit written in JavaScript. Please try it out, you might be surprised what it can do.
 
