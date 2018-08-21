@@ -8,7 +8,7 @@ disqus_id: ghost-2
 
 > The first principle is that you must not fool yourself and you are the easiest person to fool. 
 
-<sup>Richard Feynman</sub>
+<sub>Richard Feynman</sub>
 
 Welcome to *The Data Wrangler*. 
 
