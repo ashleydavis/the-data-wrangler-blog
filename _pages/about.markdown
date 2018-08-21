@@ -22,6 +22,8 @@ I'm writing to share my experience of working with data for commercial and open-
 
 One of my big open source projects has been [Data Forge](http://www.data-forge-js.com/?utm_source=the-data-wrangler&utm_campaign=the-data-wrangler&utm_medium=blog), developed to help me and my team work efficiently and effectively with data. It's a data wrangling toolkit written in JavaScript. Please try it out, you might be surprised what it can do.
 
+I have a book out now called [Data Wrangling with JavaScript](http://bit.ly/2t2cJu2), that will help you if you want a comprehensive tour of working data in JavaScript. I have also built a product for data analysis, transformation and visualization called [Data-Forge Notebook](http://www.data-forge-notebook.com/) - this is like Jupyter Notebook, but for JavaScript. It's great if you love working in Notebook- or literate-programming style.
+
 If you are interested in learning or practicing stock market trading through simulation, please see my web site [Market Wizard](https://www.market-wizard.com.au/).
 
 If you are interested in what I'm doing or have feedback, please get in touch at [ashley@codecapers.com.au](mailto://ashley@codecapers.com.au).
