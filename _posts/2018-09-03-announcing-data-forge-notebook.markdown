@@ -15,7 +15,7 @@ Now I present to you my latest endeavour: [Data-Forge Notebook](http://www.data-
 
 ![DFN main screnshot](/content/images/2018/08/DFN-main-screenshot.png)
 
-Back when I started working with data I was using Python and I loved Pandas and Jupyter Notebook. I *needed* to use JavaScript though. When working in fullstack JS the context switch to a different language is a burden and it doesn't make sense. I wanted the sophistication of Pandas and Jupyter Notebook, *but in JavaScript!* It sounds crazy, but these are the kind of projects that I love.
+Back when I started working with data I was using Python and I loved Pandas and Jupyter Notebook. I *needed* to use JavaScript though. When working in fullstack JS the context switch to a different language is a burden and it doesn't make sense. I wanted the sophistication of Pandas and Jupyter Notebook, *but in JavaScript!* It sounds crazy, but that's the kind of project that I love.
 
 Well I'm working on [Data-Forge Notebook](http://www.data-forge-notebook.com/) now and I'm collecting interest from the JS community.
 
