@@ -5,7 +5,17 @@
     </a>
     <ul>
         {% for nav in site.data.navigation %}
-            <li class="nav-{{nav.slug}}{%if page.url == nav.url %} nav-current{% endif %}" role="presentation"><a href="{{nav.url}}">{{nav.label}}</a></li>
+            <li 
+                class="nav-{{nav.slug}}{%if page.url == nav.url %} nav-current{% endif %}" 
+                role="presentation"
+                >
+                <a 
+                    href="{{nav.url}}"
+                    {%if nav.new_tab %}target="_blank"{% endif %}
+                    >
+                    {{nav.label}}
+                </a>
+            </li>
         {% endfor %}
     </ul>
     <a class="subscribe-button icon-feed" href="{{site.url}}/feed.xml">Subscribe</a>
