@@ -12,12 +12,10 @@
 
 - label: JS cheat sheet
   url: http://jscheatsheet.the-data-wrangler.com
-  slug: javascript-cheat-sheet
   new_tab: true
 
 - label: DF cheat sheet
-  url: /dataforge-cheat-sheet
-  slug: dataforge-cheat-sheet
+  url: http://dfcheatsheet.the-data-wrangler.com
 
 - label: Vagrant 
   url: /getting-started-with-vagrant
