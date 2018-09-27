@@ -16,6 +16,7 @@
 
 - label: DF cheat sheet
   url: http://dfcheatsheet.the-data-wrangler.com
+  new_tab: true
 
 - label: Vagrant 
   url: /getting-started-with-vagrant
