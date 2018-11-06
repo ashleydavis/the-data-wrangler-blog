@@ -78,7 +78,7 @@ My suspicion is the 1.4 GB limit is there for historical reasons. The V8 code or
 
 ## Node.js memory architecture
 
-So memory is limited, but I do have a trick up my sleeve to show you raise the memory limit, but before that you need a quick overview of Node.js memory architecture to understand how the trick works.
+So memory is limited, but I do have a trick up my sleeve to raise the memory limit, but before that you need a quick overview of Node.js memory architecture to understand how the trick works.
 
 The memory consumed by a Node.js application falls into one of three areas:
  
@@ -134,7 +134,7 @@ Theoretically in a [64 bit application](https://en.wikipedia.org/wiki/64-bit_com
 
 Of course I'll never be able to allocate up to 16 TB, at least not on this laptop. My laptop only has 8 GB of physical memory. Once physical memory is exhausted an application's memory will be swapped out to hard disk via [virtual memory](https://en.wikipedia.org/wiki/Virtual_memory). 
 
-So in effect I'm limited by the size of the laptop's hard drive. Even if I had 1 TB of disk space (which is pretty common now) I would even be able to allocate up to that. Of course the hard disk has files on it already and it must be shared amongst all the applications running on the laptop.
+So in effect I'm limited by the size of the laptop's hard drive. Even if I had 1 TB of disk space (which is pretty common now) I wouldn't even be able to allocate up to that amount. Of course the hard disk has files on it already and it must be shared amongst all the applications running on the laptop.
 
 ## Fitting more in memory
 
@@ -148,7 +148,7 @@ Well to start don’t ever load your entire data set into memory. Make sure you 
  
 Then always be on the lookout for memory leaks. Make sure you manage and relinquish your references. If you retain references to your allocations the garbage collector can’t do it’s job. 
  
-You should also monitor your production memory usage. This isn't difficult. Routinely call the function aforementioned [process.memoryUsage()](https://nodejs.org/api/process.html#process_process_memoryusage), log the heapUsed metric and render it to a chart. You can then easily see if there is an uptrend over time.
+You should also monitor your production memory usage. This isn't difficult. Routinely call the aforementioned function [process.memoryUsage()](https://nodejs.org/api/process.html#process_process_memoryusage), log the heapUsed metric and render it to a chart (feel free to use my open-source library [Data-Forge Plot](https://github.com/data-forge/data-forge-plot). You can then easily see if there is an uptrend over time.
 
 Lastly if all else fails, you might need to start decomposing your monolithic app into separate processes. I’m talking about microservices. 
 
@@ -156,11 +156,11 @@ This is good for scalability:
 - Each process can potentially run on a separate CPU. 
 - Each process has its own separate memory space. 
 
-Microservices are going to make your architecture more complicated, but if your application is alreay heading into complicated territory you'll probably find that microservices at least allows each of the component of the system to be simplified, even when the system as a whole is very complex.
+Microservices are going to make your architecture more complicated, but if your application is already heading into complicated territory you'll probably find that microservices at least allows each of the component of the system to be simplified, even when the system as a whole is very complex.
  
 To learn more, please see chapter 7 and 8 of my book [Data Wrangling with JavaScript](http://bit.ly/2t2cJu2). I have a lot more to say on this topic of getting your app to fit in memory. You can also learn about how to analyse and chart your app's metrics, such as memory usage.
  
-One last tip... Just remember your application doesn't have to run forever! It simply has to run for the duration of your continous delivery cycle. That gives you some kind of rough guideline for your [soak testing](https://en.wikipedia.org/wiki/Soak_testing). If you deploy ever two weeks, make sure your application can run for two weeks under load without problem!
+One last tip... just remember that your application doesn't have to run forever! It simply has to run for the duration of your continous delivery cycle. That gives you some kind of rough guideline for your [soak testing](https://en.wikipedia.org/wiki/Soak_testing). If you deploy ever two weeks, make sure your application can run for two weeks under load without problem!
 
 ## Resources
 
