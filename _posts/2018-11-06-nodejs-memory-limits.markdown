@@ -5,6 +5,9 @@ date: '2018-11-06 07:30:00'
 permalink: nodejs-memory-limits/
 post_class: feature
 disqus_id: nodejs-memory-limits
+excerpt: "Node.js has memory limitations that you can hit quite easily in production. You'll know this if you ever tried to load a large data file into your Node.js application.
+
+But where exactly are the limits of memory in Node.js? In this short post we'll push Node.js to it's limits to figure out where those limits are. We'll also cover some practical techniques you can use to work around the memory limitations and get your data to fit into memory."
 ---
 
 ## Or how to blow up your app in 100 easy steps
