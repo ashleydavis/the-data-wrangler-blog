@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'Data Wrangling with JavaScript: Printed!'
-date: '2018-12-17 07:30:00'
+date: '2018-12-16 07:30:00'
 permalink: data-wrangling-with-javascript-printed/
 post_class: feature
 disqus_id: data-wrangling-with-javascript-printed
