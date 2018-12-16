@@ -25,14 +25,14 @@ If Python and R are the kinds of the data world, why read a book about doing thi
 
 If you are into JavaScript then this might seem like the obvious choice to you, but at the time, several years ago, the typical wisdom was telling me that this kind of work should be done in Python. Of course JavaScript runs everywhere now:
 
-- Server &#10004;
-- Browser &#10004;
-- Mobile &#10004;
-- Desktop &#10004;
+- Server <span style="color: green;">&#10004;</span>
+- Browser <span style="color: green;">&#10004;</span>
+- Mobile <span style="color: green;">&#10004;</span>
+- Desktop <span style="color: green;">&#10004;</span>
 
 Why not have one more?
 
-- Data wrangling and analyis &#10004;
+- Data wrangling and analyis <span style="color: green;">&#10004;</span>
 
 <img src="/content/images/2018/12/Davis-DWJS-HI.png" alt="Data Wrangling with JavaScript" width="400"/>
 
