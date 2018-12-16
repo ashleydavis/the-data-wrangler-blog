@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 'Data Wrangling with JavaScript: Printed!'
+image: "/content/images/2018/02/Banner-4.png"
 date: '2018-12-16 07:30:00'
 permalink: data-wrangling-with-javascript-printed/
 post_class: feature
@@ -12,9 +13,10 @@ The world of data is big and it can be difficult to navigate it on your own. Wit
 
 My book [Data Wrangling with JavaScript](http://bit.ly/2t2cJu2) has made it to print!
 
+The world of data is big and it can be difficult to navigate it on your own. With data all around us growing at an ever-increasing rate, it's more important than ever that we can deal with data effectively and efficiently to support our businesses and our customers, to be able to monitor and understand our processes and enable faster and better decision-making.
+
 ![Box of books](/content/images/2018/12/IMG_20181214_100614.jpg)
 
-The world of data is big and it can be difficult to navigate it on your own. With data all around us growing at an ever-increasing rate, it's more important than ever that we can deal with data effectively and efficiently to support our businesses and our customers, to be able to monitor and understand our processes and enable faster and better decision-making.
 
 Data Wrangling with JavaScript is a practical, hands-on and extensive guide to working with data in JavaScript. It describes the process of development in detail. It comes with working code examples that you can try out for yourself, but even just reading the book gives you the feeling for what it's like to do this work for yourself. The book has a broad coverage of tools, techniques and design patterns that you need to be effective and it has an emphasis on building out your own toolkit and understanding how to compose flexible and extensible data pipeines.
 
