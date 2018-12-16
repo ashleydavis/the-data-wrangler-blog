@@ -17,8 +17,7 @@ The world of data is big and it can be difficult to navigate it on your own. Wit
 
 ![Box of books](/content/images/2018/12/IMG_20181214_100614.jpg)
 
-
-Data Wrangling with JavaScript is a practical, hands-on and extensive guide to working with data in JavaScript. It describes the process of development in detail. It comes with working code examples that you can try out for yourself, but even just reading the book gives you the feeling for what it's like to do this work for yourself. The book has a broad coverage of tools, techniques and design patterns that you need to be effective and it has an emphasis on building out your own toolkit and understanding how to compose flexible and extensible data pipeines.
+Data Wrangling with JavaScript is a practical, hands-on and extensive guide to working with data in JavaScript. It describes the process of development in detail. It comes with working code examples that you can try out for yourself, but even just reading the book makes you feel like you are doing the work for yourself and gaining that experience. The book has a broad coverage of the tools, techniques and patterns you need to be effective with an emphasis on building out your own toolkit and understanding how to build flexible and extensible data pipeines.
 
 ![Me and my book](/content/images/2018/12/IMG_20181215_074552.jpg)
 
