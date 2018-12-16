@@ -35,7 +35,6 @@ Why not one more?
 
 - Data wrangling and analyis :heavy_check_mark:
 
-
 ![Data Wrangling with JavaScript](/content/images/2018/12/Davis-DWJS-HI.png)
 
 When I started working with data in JavaScript there wasn't much information or resources out there, I had to learn it for myself. I wrote this book in the hope of making life a bit easier for those that come after me. I've already blazed these trails and in [Data Wrangling with JavaScript](http://bit.ly/2t2cJu2) I share my years of hard won experience with you. 
