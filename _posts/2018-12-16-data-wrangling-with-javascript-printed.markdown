@@ -34,7 +34,7 @@ Of course JavaScript runs everywhere:
 
 So why not have one more?
 
-- Data wrangling and analyis <span style="color: green;">&#10004;</span>
+- Data wrangling and analysis <span style="color: green;">&#10004;</span>
 
 <img src="/content/images/2018/12/Davis-DWJS-HI.png" alt="Data Wrangling with JavaScript" width="400"/>
 
