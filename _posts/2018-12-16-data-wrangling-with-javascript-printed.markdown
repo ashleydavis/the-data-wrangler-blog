@@ -21,7 +21,7 @@ Data Wrangling with JavaScript is a practical, hands-on and extensive guide to w
 
 <img src="/content/images/2018/12/IMG_20181215_074552.jpg" alt="Me and my book" width="400"/>
 
-If Python and R are the kinds of the data world, why read a book about doing this in JavaScript? Exploratory coding and data analysis in JavaScript have enabled me to explore, transform, analyze and visualize the myriad of data that has come across my desk over the years. I was able to prototype useful data-centric code and then roll that code out to a production JavaScript environment. This seemed like a productivity win, rather than using Python and then having to rewrite parts of it in JavaScript, I did it all in JavaScript.
+If Python and R are the kings of the data world, why read a book about doing this in JavaScript? Exploratory coding and data analysis in JavaScript have enabled me to explore, transform, analyze and visualize the myriad of data that has come across my desk over the years. I was able to prototype useful data-centric code and then roll that code out to a production JavaScript environment. This seemed like a productivity win, rather than using Python and then having to rewrite parts of it in JavaScript, I did it all in JavaScript.
 
 If you are into JavaScript then this might seem like the obvious choice to you, but at the time, several years ago, the typical wisdom was telling me that this kind of work should be done in Python. Of course JavaScript runs everywhere now:
 
