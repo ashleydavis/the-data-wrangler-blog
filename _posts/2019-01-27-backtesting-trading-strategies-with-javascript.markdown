@@ -80,7 +80,7 @@ Our trading style is a very personal choice and must be aligned with our goals a
 - Performance can be tested; and
 - Trading can be automated.
 
-It's the last reason that's most appealling. It's the dream of any systematic trader to be able to go fully algoritmic,  putting our strategy on automatic then retiring to a beach with a cocktail in hand.
+It's the last reason that's most appealling. It's the dream of any systematic trader to be able to go fully algorithmic,  putting our strategy on automatic then retiring to a beach with a cocktail in hand.
 
 ![Cocktail on the beach](/content/images/2019/01/drink-on-beach.jpg)
 [Image source](https://www.publicdomainpictures.net/en/view-image.php?image=21543&picture=drink-on-beach)
@@ -96,7 +96,7 @@ There are many reasons to simulate trading, not just to test the performance of 
 You might also want to simulate trading to
 
 - Practice trading and gain confidence/experience in the market, but in a risk-free environment;
-- Prepare for trading for when you don't yet have the capital for real trading;
+- Prepare for trading when you don't yet have the capital for real trading;
 - Evaluate alternative strategies;
 - Figure out how to manage risks and survive worst-case scenarios;
 - Understand a particular market or financial instrument; and importantly
@@ -106,14 +106,14 @@ As you can see there are many reasons why simulation is useful. I'm sure you can
 
 ## Managing risk
 
-An important aspect of trading (and hence of simultation) is learning how to manage risk. 
+An important aspect of trading (and hence of trading simulation) is learning how to manage risk. 
 
 > When I talk about risk of course I'm talking about the risk of losing money. Losing is a part of the game and it's ok provided your eventual wins outweigh your losses. That's how we can make a profit.
 
 ![Risk vs reward](/content/images/2019/01/Risk-VS-Rewards.jpg)
 [Image source](https://aspenwoolf.co.uk/student-property-investment-risks-rewards/)
 
-Simulation can help us here in two ways. It can help us prepare for the psychological impact of losing. It also shows whether the wins from our strategy can overpower the losses and how well our strategy copes with the occasional disasterous market corrections.
+Simulation can help us here in two ways. It can help us prepare for the psychological impact of losing. It also shows whether the wins from our strategy can overpower the losses and how well our strategy copes with occasional disasterous market corrections.
 
 ## Types of simulation
 
@@ -123,38 +123,38 @@ There are actually two main ways to simulate trading. *Paper trading* and *backt
 
 Unfortunately paper trading is very slow. It happens in realtime, which means that if you are simulating a medium- to long-term trading strategy it would take months if not years to yield results.
 
-> Paper trading is easy and realistic. It's a good starting point, but is also very very slow.
+> Paper trading is easy and realistic. It's a good starting point, but is also very slow.
 
-This is where *backtesting* comes to our rescue. It's called *back*testing because it tests on historical data. It's going *back*wards in time to find out what would have happened if you had executed your strategy in the real market in the past. 
+This is where *backtesting* comes to our rescue. It's called *back*testing because it's a tests of a trading strategy on historical data. It's going *back*wards in time to find out what would have happened if you had executed your strategy in the real market in the past. 
 
-It's more complicated than paper trading and you are going to need some reasonable trading skills in order to do it. Backtesting wins though because it delivers results very quickly. Through backtesting we can simulate our strategy and analyze the results just as quickly as our computer program can process all the data. Having optimized code and a fast computer will help here, but anyway you look at backtesting delivers results very quickly compared to paper trading. 
+It's more complicated than paper trading and you are going to need some programming skills to do it. Backtesting wins though because it delivers results very quickly. Through backtesting we can simulate our strategy and analyze the results just as quickly as our computer program can process all the data. Having optimized code and a fast computer will help here, but anyway you look at it - backtesting delivers results very quickly compared to paper trading. 
 
-A short and simple backtest will take minutes. More complex strategies, bigger markets and more data add more time. But we are still talking about having a result in hours or days, rather than in weeks, months or even years.
+A short and simple backtest will take minutes. More complex strategies, bigger markets and more data increase the amount of time required. But we are still talking about having a result in hours or days, rather than in weeks, months or even years.
 
 > Backtesting is more complicated, but is vastly quicker than paper trading.
 
 ## We need data!
 
-In order to test a strategy on the past history of market we need some historical data. 
+In order to test a strategy on the past history of a market we need some historical data. 
 
 I used to use the free Yahoo financial API, however since it's demise I've started paying for data. Currently I use data from [Norgate](https://norgatedata.com/), [EOD Historical](https://eodhistoricaldata.com/) and from [IG](https://labs.ig.com/) who are one of my brokers. 
 
-In order to demonstrate backtesting to you I need to pick an instrument to trade. This isn't about choosing a good instrument I just need to choose something for demonstration purposes.
+In order to demonstrate backtesting I must pick an instrument to trade. This isn't about choosing a good instrument I just need to choose something for demonstration purposes.
 
 The instrument I've picked for this post is STW, that's an [exchange traded fund](https://en.wikipedia.org/wiki/Exchange-traded_fund) for [the ASX 200 index](https://en.wikipedia.org/wiki/S%26P/ASX_200). Don't think this is the only option though! 
 
-The backtesting technique I'm presenting in this post can be used for any instrument. You can backtest on futures, individual stocks, currencies or other exchange traded funds. You have a huge amount of choice in this regard and ranking and selecting financial instruments is a whole other topic that I might discuss in future post.
+The backtesting technique I'm presenting in this post can be used for any instrument. You can backtest on futures, individual stocks, currencies or other exchange traded funds. You have a huge amount of choice in this regard, but ranking and portfolio selection is a larger topic that I might discuss in the future.
 
-See below for a chart of the ASX 200:
+See below for a 2017 chart of the ASX 200:
 
 ![ASX 200 chart](/content/images/2019/01/ASX200 - 1 year - potential short trades.png)
 Image source: Yahoo Finance.
 
-In that chart I've highlighted the [long](https://en.wikipedia.org/wiki/Long_(finance)) and [short](https://en.wikipedia.org/wiki/Short_(finance)) trades. Long trades in blue and short trades in purple.  I did this just to indicate the kinds of trades we are aiming for. We'd like to have a strategy that can buy and sell at the right times to make a profit. 
+In that chart I've highlighted the [long](https://en.wikipedia.org/wiki/Long_(finance)) and [short](https://en.wikipedia.org/wiki/Short_(finance)) trades. Long trades in blue and short trades in purple.  I did this just to indicate the kinds of trades we could get from this instrument. We'd like to have a strategy that can buy and sell at the right times to make a profit. 
 
-In this post though we are only focusing on the long trades. You might think of that as just normal buying and selling and making profit when the market is trending up. Short selling would allow us to also make profit in a downtrending market, but it is more difficult and more risky and I will save it for a future post, to keep things the simple example strategy for this post is trading *long only*.
+In this post though we are only focusing on the long trades. You might think of that as just normal buying and selling and making a profit when the market is trending up. Short selling allows us to make profit also in a downtrending market, but it is more difficult and more risky and I will save it for a another post, to keep things simple the example strategy for this post will be trading *long only*.
 
-> To keep things simple for the demonstration in this post our trading strategy will be long only (no short selling).
+> To keep things simple for this demonstration our trading strategy will be trading long only (no short selling).
 
 So what does our data look like? You can actually store your data however you want. You might have it spread out through a bunch of different files or structured in a database for efficient access.  For the purposes of this post we'll have our data stored in a [CSV file](https://en.wikipedia.org/wiki/Comma-separated_values). CSV is a simple and common data format. 
 
@@ -164,7 +164,7 @@ You can see below what our example data looks like. This is a CSV data file cont
 
 You can also find the [example data file](https://raw.githubusercontent.com/Grademark/grademark-first-example/master/data/STW.csv) online in [the GitHub repo that accompanies this post](https://github.com/Grademark/grademark-first-example).
 
-Now that we have some data to tha we can use for backtesting, let's devise a simple trading strategy.
+Now that we have some data to use for our backtesting, let's devise a simple trading strategy.
 
 ## An example trading system
 
@@ -174,7 +174,7 @@ For this blog post I'm going to demonstrate backtesting using a [mean reversion 
 
 > Mean reversion strategies are based on the statistics phenomenon *regression to the mean*.
 
-Variables that have been extended far from their average value have a strong statistical tendency to pull back to the average. You can see what this looks like in the following graphic. The red line in the diagram indicates the average or mean value. The black line is the actual value that is oscilating around the average. Sometimes the value is below the average, othertimes it's above it.
+Variables that have been extended away from their average value have a strong statistical tendency to pull back to the average. You can see what this looks like in the following graphic. The red line in the diagram indicates the average or mean value. The black line is the actual value that is oscilating around the average. Sometimes the value is below the average, othertimes it's above it.
 
 ![Regression to the mean](/content/images/2019/01/regression-reversion-to-the-mean.gif)
 [Image source](https://asymmetryobservations.com/definitions/countertrend/regression-toward-the-mean/)
@@ -185,7 +185,7 @@ You can see that whenever the black line stretches too far below the average it 
 
 How reliable is this strategy? How likely is a dip to bounce back? We can only know by simulating the strategy on historical data. That allows us to understand how well it would have worked in the past. We can then compute performance metrics and use them to predict how this technique might perform in the future.
 
-Please note that the mean reversion trading strategy I present here is rather basic and very simple. I'm keeping it simple just to keep this blog post simple, but it's actually good starting point for any new strategy to start with the simplest thing that you can conceive. We can always add more rules, more filters and more complexity later, but for this post we'll use the most simplest mean reversion rules possible.
+Please note that the mean reversion trading strategy I present here is rather basic. I'm keeping it simple just to keep this blog post simple, but it's actually a good starting point for any new strategy to start with the simplest thing that you can conceive. We can always add more rules, more filters and more complexity later, but for this post we'll still to the most simplest mean reversion rules possible.
 
 ## Backtesting with JavaScript
 
@@ -242,7 +242,7 @@ Our example mean reversion trading strategy is simple, so our code to open a pos
     }
 ```
 
-This code opens a trade by calling the `enterPosition` function when the closing price is less than the average price. This function is provided by the Grademark API. The `args` variable is provided for us by Grademark and gathers together pertinant details of the trading environment such as the latest [bar](https://en.wikipedia.org/wiki/Open-high-low-close_chart) of price action that we have just used.
+This code opens a trade by calling the `enterPosition` function when the closing price is less than the average price. This function is provided by the Grademark API. The `args` variable is provided for us by Grademark and gathers together pertinant details of the trading environment such as the latest [bar](https://en.wikipedia.org/wiki/Open-high-low-close_chart) of price action.
 
 ### Exiting a position
 
@@ -254,7 +254,7 @@ Closing a trade - exiting our position - is the reverse of entering it:
     }
 ```
 
-Here we are saying that when the closing prices is above the average price, then we exit the position immediately.
+Here we are saying that when the closing price is above the average price, then we exit the position immediately.
 
 > I know what you are thinking: can something so simple and naive actually produce a profit? Stay tuned, very soon we'll find out.
 
@@ -262,11 +262,12 @@ Here we are saying that when the closing prices is above the average price, then
 
 When I'm trading I also like to use a [stop loss](https://www.investopedia.com/articles/stocks/09/use-stop-loss.asp) rule to help limit  losses and manage risk. A stop loss rule is a different kind of exit, one that kicks in to stop us losing more than a certain amount of money.
 
-In the following code I'm setting a maximum loss of 2% per position before exiting:
+In the following stop loss rule I'm setting a maximum loss of 2% per position before exiting:
 
 ```javascript
     const stopDistancePct = 2;
-    const stopPrice = args.entryPrice - (args.entryPrice * (stopDistancePct/100));
+    const stopPrice = 
+        args.entryPrice - (args.entryPrice * (stopDistancePct/100));
     if (args.bar.close <= stopPrice) {
         exitPosition();
     }
@@ -274,13 +275,13 @@ In the following code I'm setting a maximum loss of 2% per position before exiti
 
 Note that we are calling the same `exitPosition` function as we did in our exit rule. A stop loss is just another way of exiting a position.
 
-Note that using a stop loss is considered by some traders to erode profit potential for a strategy. So why do I like to use this rule? I like to use this rule in real trading as I feel it protects me against the heaviest losses. It buys me some piece of mind. In realy trading I have a stop loss rule automatically applied by my broker and this means I can go on holiday and know that my investments are protected. 
+Note that using a stop loss is considered by some traders to erode profit potential for a strategy. So why do I like to use this rule? I like to use this rule in real trading as I feel it protects me against the heaviest losses. It buys me some piece of mind. In real trading I have a stop loss rule automatically applied by my broker and this means I can go on holiday and know that my investments are protected. 
 
-In this example I've inlcuded the stop loss right from the start, but normally you might consider this as an incrmental addition to the strategy, testing before and after adding it - normally you'd probably like to know how much of difference the stop loss makes to know if it's worthwhile.
+In this example I've included the stop loss right from the start, but normally you might consider this as an incremental addition to the strategy, testing before and after adding it - normally you'd probably like to know how much of difference the stop loss makes to understand if it is worthwhile.
 
 ### Simulation loop
 
-The last and main piece of the puzzle for backtesting is the simulation loop. This walks over our input price data day by day, evaluates our rules and creates a series of trades.
+The main piece of the puzzle for backtesting is the simulation loop. It walks over our input price data day by day, evaluates our rules and creates a series of trades.
 
 If we wrote the code ourselves it would look something like this:
 
@@ -289,20 +290,18 @@ If we wrote the code ourselves it would look something like this:
         if (inPosition) { 
             // We currently have an open position, 
             // do we need to exit the position?
-            evaluateStopLoss(bar, position); // Evaluate stop loss rule.
-            evaluateExitRule(bar, position); // Evaluate exit rule.
+            evaluateStopLoss({ bar, position }); // Evaluate stop loss rule.
+            evaluateExitRule({ bar, position }); // Evaluate exit rule.
         }
         else {
             // We currently have no open position, 
             // do we need to open a new position?
-            evaluateEntryRule(bar); // Evaluate entry rule.
+            evaluateEntryRule({ bar }); // Evaluate entry rule.
         }
     }
 ```
 
-This code snippet is really just pseudo-code, Grademark actually provides the simulation loop that loops over your input data and evaluates your trading strategy step by step.
-
-Using Grademark we can do our simulation simply by calling the `backtest` function and passing in the input data and a JavaScript object that represents our trading strategy:
+This code snippet is really just pseudo-code, Grademark actually provides the simulation loop for us. With Grademark we simply call the `backtest` function and pass in the input data and a JavaScript object that represents our trading strategy:
 
 ```javascript
     const { backtest } = require('grademark');
@@ -360,7 +359,7 @@ Profit and other metrics are computed and attached to each trade object.
 
 ### Analysing the performance of the strategy
 
-To understand global performance of our strategy we might use Data-Forge and compute the sum of profit over all the trades:
+To understand the global performance of our strategy we might use Data-Forge and compute the sum of profit over all the trades:
 
 ```javascript
 const totalProfit = trades.deflate(trade => trade.profit).sum();
@@ -380,7 +379,7 @@ The `analyze` function is passed an amount of starting capital and the set of tr
 
 We now have a basic idea of how good (or bad) our strategy is. We can use this information to work out if the profit (83%) is worthwile compared to the max risk (2%) or maximum drawdown (-28%). 
 
-We can now ask questions like *can I tolerate a -28% drawdown?*. We can use the analysis to determine if changes to a strategy improve it or make it worse. The analysis is also useful to compare against alternative strategies that we might be considering.
+We can now ask questions like *can I tolerate a -28% drawdown?* We can use the analysis to determine if changes to a strategy improve it or make it worse. The analysis is also allows comparison between alternate strategies that we might be considering.
 
 ## Visualizing equity and drawdown
 
@@ -392,7 +391,7 @@ The equity curve shows us the value of our trading account increasing over time:
 
 Another useful chart shows the drawdown of our strategy over time. 
 
-The drawdown chart shows the amount of time a strategy spends underwater:
+With the drawdown chart we can see the amount of time our strategy spends underwater:
 
 ![Drawdown chart](/content/images/2019/01/Drawdown chart.png)
 
@@ -410,9 +409,9 @@ await drawdownPlot.renderImage("drawdown.png");
 
 ## Conclusion
 
-This post has been basic overview of simulating and backtesting a simple example (mean reversion) trading strategy using JavaScript and the Grademark API.
+This post has been a basic overview of simulating and backtesting a simple example (mean reversion) trading strategy using JavaScript and the Grademark API.
 
-This is just start and we still have much more work to do. For instance we haven't taken into account the affect of fees or slippage. That means the results we are getting are probably too optimistic. 
+This is just a starting point and we still have much more work to do. For instance we haven't taken into account the affect of fees or slippage. That means the results we are getting are probably too optimistic. 
 
 Also our analysis is only based on one sequence of trades that would have occurred in the past and so far our use of data science has been simple and the results are quite fragile. We can't expect to have this exact same performance again in the future because we'll never again see this exact same sequence of trades. Fortunately we have more statistical tools we can throw at this problem such as [monte-carlo simulation](https://en.wikipedia.org/wiki/Monte_Carlo_method). Monte-carlo simulation will help us have a better statistical understanding of what *range* of performance we can expect in the future from our trading strategy.
 
