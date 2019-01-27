@@ -400,11 +400,11 @@ Such charts are produced by calling the Grademark functions `computeEquityCurve`
 
 ```javascript
 const equityCurve = computeEquityCurve(10000, trades);
-const equityCurvePlot = equityCurve.plot({ chartType: "area" });
+const equityCurvePlot = equityCurve.plot({ chartType: "area", y: { min: 9500, label: "Equity $" }, x: { label: "Trade #" }  });
 await equityCurvePlot.renderImage("equity-curve.png");
 
 const drawdown = computeDrawdown(10000, trades);
-const drawdownPlot = drawdown.plot({ chartType: "area" }));
+const drawdownPlot = drawdown.plot({ chartType: "area", y: { label: "Equity $" }, x: { label: "Trade #" } });
 await drawdownPlot.renderImage("drawdown.png");
 ```
 
