@@ -4,9 +4,15 @@ The repo for my blog: The Data Wrangler
 
 ## Testing
 
-Run the test batch file.
-
 You need Ruby and Jekyll installed.
+
+Run the test batch file:
+
+    test.bat
+
+Navigate to:
+
+    http://localhost:4000/
 
 ## Deployment
 
