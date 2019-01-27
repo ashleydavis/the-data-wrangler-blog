@@ -73,7 +73,7 @@ Our trading strategy consists of a system of rules the we use to decide, based o
 
 ![A trading system](/content/images/2019/01/A trading system.png)
 
-Our trading style is a very personal choice and must be aligned with our goals and financial strategy. I prefer systematic quantitive trading strategies for the following reasons:
+Our trading style is a very personal choice and must be aligned with our goals and financial strategy. I prefer systematic quantitative trading strategies for the following reasons:
 
 - It takes the emotion out of trading;
 - It can be simulated;
