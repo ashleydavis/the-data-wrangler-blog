@@ -80,12 +80,12 @@ Our trading style is a very personal choice and must be aligned with our goals a
 - Performance can be tested; and
 - Trading can be automated.
 
-It's the last reason that's most appealling. It's the dream of any systematic trader to be able to go fully algorithmic,  putting our strategy on automatic then retiring to a beach with a cocktail in hand.
+It's the last reason that's most appealing. It's the dream of any systematic trader to be able to go fully algorithmic,  putting our strategy on automatic then retiring to a beach with a cocktail in hand.
 
 ![Cocktail on the beach](/content/images/2019/01/drink-on-beach.jpg)
 [Image source](https://www.publicdomainpictures.net/en/view-image.php?image=21543&picture=drink-on-beach)
 
-> More realistically though: a systematic trading strategy that works is a great way to supplement your income and build capital. Get it wrong though and you will bascially automate losing money. No one wants that. So be careful! 
+> More realistically though: a systematic trading strategy that works is a great way to supplement your income and build capital. Get it wrong though and you will basically automate losing money. No one wants that. So be careful! 
 
 Fortunately we can simulate trading to help us understand if our strategy works. That's what this post is all about!
 
@@ -113,7 +113,7 @@ An important aspect of trading (and hence of trading simulation) is learning how
 ![Risk vs reward](/content/images/2019/01/Risk-VS-Rewards.jpg)
 [Image source](https://aspenwoolf.co.uk/student-property-investment-risks-rewards/)
 
-Simulation can help us here in two ways. It can help us prepare for the psychological impact of losing. It also shows whether the wins from our strategy can overpower the losses and how well our strategy copes with occasional disasterous market corrections.
+Simulation can help us here in two ways. It can help us prepare for the psychological impact of losing. It also shows whether the wins from our strategy can overpower the losses and how well our strategy copes with occasional disastrous market corrections.
 
 ## Types of simulation
 
@@ -125,7 +125,7 @@ Unfortunately paper trading is very slow. It happens in realtime, which means th
 
 > Paper trading is easy and realistic. It's a good starting point, but is also very slow.
 
-This is where *backtesting* comes to our rescue. It's called *back*testing because it's a tests of a trading strategy on historical data. It's going *back*wards in time to find out what would have happened if you had executed your strategy in the real market in the past. 
+This is where *backtesting* comes to our rescue. It's called *back*testing because it tests a trading strategy on historical data. It's going *back*wards in time to find out what would have happened if you had executed your strategy in the real market in the past. 
 
 It's more complicated than paper trading and you are going to need some programming skills to do it. Backtesting wins though because it delivers results very quickly. Through backtesting we can simulate our strategy and analyze the results just as quickly as our computer program can process all the data. Having optimized code and a fast computer will help here, but anyway you look at it - backtesting delivers results very quickly compared to paper trading. 
 
@@ -150,19 +150,19 @@ See below for a 2017 chart of the ASX 200:
 ![ASX 200 chart](/content/images/2019/01/ASX200 - 1 year - potential short trades.png)
 Image source: Yahoo Finance.
 
-In that chart I've highlighted the [long](https://en.wikipedia.org/wiki/Long_(finance)) and [short](https://en.wikipedia.org/wiki/Short_(finance)) trades. Long trades in blue and short trades in purple.  I did this just to indicate the kinds of trades we could get from this instrument. We'd like to have a strategy that can buy and sell at the right times to make a profit. 
+In that chart I've highlighted the [long](https://en.wikipedia.org/wiki/Long_(finance)) and [short](https://en.wikipedia.org/wiki/Short_(finance)) trades. Long trades in blue and short trades in purple.  I annotated this chart to indicate the kinds of trades we could get from this instrument. We'd like to have a strategy that can buy and sell at the right times to make a profit. 
 
-In this post though we are only focusing on the long trades. You might think of that as just normal buying and selling and making a profit when the market is trending up. Short selling allows us to make profit also in a downtrending market, but it is more difficult and more risky and I will save it for a another post, to keep things simple the example strategy for this post will be trading *long only*.
+In this post though we are only focusing on the long trades. You might think of that as just normal buying and selling and making a profit when the market is trending up. Short selling allows us to also make profit in a downtrending market, but it is more difficult and more risky and I will save it for a another post, to keep things simple the example strategy for this post will be trading *long only*.
 
 > To keep things simple for this demonstration our trading strategy will be trading long only (no short selling).
 
-So what does our data look like? You can actually store your data however you want. You might have it spread out through a bunch of different files or structured in a database for efficient access.  For the purposes of this post we'll have our data stored in a [CSV file](https://en.wikipedia.org/wiki/Comma-separated_values). CSV is a simple and common data format. 
+So what does our data look like? There's any number of ways you might store your data. You might have it spread out through a bunch of different files or structured in a database for efficient access.  For the purposes of this post we'll have our data stored in a [CSV file](https://en.wikipedia.org/wiki/Comma-separated_values). CSV is a simple and common data format. 
 
 You can see below what our example data looks like. This is a CSV data file containing daily prices for STW for a period of three years:
 
 ![STW data file](/content/images/2019/01/STW data.png)
 
-You can also find the [example data file](https://raw.githubusercontent.com/Grademark/grademark-first-example/master/data/STW.csv) online in [the GitHub repo that accompanies this post](https://github.com/Grademark/grademark-first-example).
+You can find the [example data file](https://raw.githubusercontent.com/Grademark/grademark-first-example/master/data/STW.csv) online in [the GitHub repo that accompanies this post](https://github.com/Grademark/grademark-first-example).
 
 Now that we have some data to use for our backtesting, let's devise a simple trading strategy.
 
@@ -174,7 +174,7 @@ For this blog post I'm going to demonstrate backtesting using a [mean reversion 
 
 > Mean reversion strategies are based on the statistics phenomenon *regression to the mean*.
 
-Variables that have been extended away from their average value have a strong statistical tendency to pull back to the average. You can see what this looks like in the following graphic. The red line in the diagram indicates the average or mean value. The black line is the actual value that is oscilating around the average. Sometimes the value is below the average, othertimes it's above it.
+Variables that have been extended away from their average value have a strong statistical tendency to pull back to the average. You can see what this looks like in the following graphic. The red line in the diagram indicates the average or mean value. The black line is the actual value that is oscillating around the average. Sometimes the value is below the average, other times it's above it.
 
 ![Regression to the mean](/content/images/2019/01/regression-reversion-to-the-mean.gif)
 [Image source](https://asymmetryobservations.com/definitions/countertrend/regression-toward-the-mean/)
@@ -242,7 +242,7 @@ Our example mean reversion trading strategy is simple, so our code to open a pos
     }
 ```
 
-This code opens a trade by calling the `enterPosition` function when the closing price is less than the average price. This function is provided by the Grademark API. The `args` variable is provided for us by Grademark and gathers together pertinant details of the trading environment such as the latest [bar](https://en.wikipedia.org/wiki/Open-high-low-close_chart) of price action.
+This code opens a trade by calling the `enterPosition` function when the closing price is less than the average price. This function is provided by the Grademark API. The `args` variable is provided for us by Grademark and gathers together pertinent details of the trading environment such as the latest [bar](https://en.wikipedia.org/wiki/Open-high-low-close_chart) of price action.
 
 ### Exiting a position
 
@@ -334,7 +334,7 @@ const strategy = {
 
 ### Capturing trades
 
-The process of backtesting generates trades. The result of the `backtest` function captures the important data about each trade including entry and exit dates, entry and exit prices and the amount of profit per trade. Here's a extract from Grademark's TypeScript interface for a trade:
+The process of backtesting generates trades. The result of the `backtest` function captures the important data about each trade including entry and exit dates, entry and exit prices and the amount of profit per trade. Here's an extract from Grademark's TypeScript interface for a trade:
 
 ```typescript
 export interface ITrade {
@@ -373,13 +373,13 @@ const { analyze } = require('grademark');
 const analysis = analyze(10000, trades);
 ```
 
-The `analyze` function is passed an amount of starting capital and the set of trades. In this example we are starting our virtual trading with a $10,000 account. The analysis loops over the trades and simulates trading with the requested amount of capital. Profitable trades increase the size of our account, losing trades decrease the size of our account. The result is a performance summary of our trading strategy that includes total profit and other useful metrics:
+The `analyze` function is passed an amount of starting capital and the set of trades. In this example we are funding our virtual trading with a $10,000 account. The analysis loops over the trades and simulates trading with the requested amount of capital. Profitable trades increase the size of our account, losing trades decrease the size of our account. The result is a performance summary of our trading strategy that includes total profit and other useful metrics:
 
 ![Strategy performance](/content/images/2019/01/Strategy analysis.png)
 
-We now have a basic idea of how good (or bad) our strategy is. We can use this information to work out if the profit (83%) is worthwile compared to the max risk (2%) or maximum drawdown (-28%). 
+We now have a basic idea of how good (or bad) our strategy is. We can use this information to work out if the profit (83%) is worthwhile compared to the max risk (2%) or maximum drawdown (-28%). 
 
-We can now ask questions like *can I tolerate a -28% drawdown?* We can use the analysis to determine if changes to a strategy improve it or make it worse. The analysis is also allows comparison between alternate strategies that we might be considering.
+We can now ask questions like *can I tolerate a -28% drawdown?* We can use the analysis to determine if changes to a strategy improve it or make it worse. The analysis also allows comparison between alternate strategies that we might be considering.
 
 ## Visualizing equity and drawdown
 
@@ -395,7 +395,7 @@ With the drawdown chart we can see the amount of time our strategy spends underw
 
 ![Drawdown chart](/content/images/2019/01/Drawdown chart.png)
 
-Such charts are produced by calling the Grademark functions `computeEquityCurve` and `computeDrawdown` and then ploting charts from the resulting data using [Data-Forge Plot](https://www.npmjs.com/package/data-forge-plot) or [Data-Forge Notebook](http://www.data-forge-notebook.com/):
+Such charts are produced by calling the Grademark functions `computeEquityCurve` and `computeDrawdown` and then plotting charts using [Data-Forge Plot](https://www.npmjs.com/package/data-forge-plot) or [Data-Forge Notebook](http://www.data-forge-notebook.com/):
 
 ```javascript
 const equityCurve = computeEquityCurve(10000, trades);
@@ -417,7 +417,7 @@ Also our analysis is only based on one sequence of trades that would have occurr
 
 In addition how do we know we are using the best parameters for our indicators? In this example trading strategy we used 30 days as a parameter to our moving average. Why 30 days? Why not some other number? Could a different value produce better (or worse) performance? We can use a process called [walk-forward optimization](https://en.wikipedia.org/wiki/Walk_forward_optimization), a kind of data-mining, to help us determine the performance impact of different parameter values for our trading strategy.
 
-As you can see there are more advanced aspects of trading simulation and quantitiative trading I could write about. If you are interested in this sort of thing and want me to continue please reach out and tell me your area of interest.
+As you can see there are more advanced aspects of trading simulation and quantitative trading I could write about. If you are interested in this sort of thing and want me to continue please reach out and tell me your area of interest.
 
 ## Resources
 
