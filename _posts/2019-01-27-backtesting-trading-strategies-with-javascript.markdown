@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'Backtesting trading strategies with JavaScript'
-image: /content/images/2019/01/Equity curve.png
+image: /content/images/2019/01/Equity-curve.png
 date: '2019-01-27 07:30:00'
 permalink: backtesting-trading-strategies-with-javascript/
 post_class: feature
@@ -388,7 +388,7 @@ After backtesting it's very common to render an equity curve for our strategy.
 
 The equity curve shows us the value of our trading account increasing over time:
 
-![Equity curve](/content/images/2019/01/Equity curve.png)
+![Equity curve](/content/images/2019/01/Equity-curve.png)
 
 Another useful chart shows the drawdown of our strategy over time. 
 
