@@ -1,14 +1,14 @@
 ---
 layout: post
 title: 'Backtesting trading strategies with JavaScript'
-image: "/content/images/2019/01/Equity curve.png"
+image: /content/images/2019/01/Equity curve.png
 date: '2019-01-27 07:30:00'
 permalink: backtesting-trading-strategies-with-javascript/
 post_class: feature
 disqus_id: backtesting-trading-strategies-with-javascript
 excerpt: "
 JavaScript can be used to do many things, including quantitative trading.
-In this post I show how to backtest a quantitative trading strategies with
+In this post I show how to backtest a quantitative trading strategy with
 JavaScript.
 "
 ---
