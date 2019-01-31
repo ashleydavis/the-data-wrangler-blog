@@ -42,6 +42,12 @@ Please [show your support on Patreon](https://www.patreon.com/thedatawrangler) a
 
 I also have a desktop build prepared for Patrons. There is no setup required for this, just download it and run it to start your automated internet speed testing.
 
+UPDATE 2019
+
+I'm no longer using Patreon.
+The code for this is now available on GitHub: https://github.com/ashleydavis/internet-speed-test
+
+
 # Why?
 
 Ok so this is Australia, we aren't exactly known for our fast internet. After being frustated by poor performance and regular outages I started testing my internet speed more frequently. I did this manually for a while before I committed to coding an automated solution.
