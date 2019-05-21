@@ -17,7 +17,7 @@ First though, a reminder on what this is all about!
 
 ## What is Data-Forge Plot?
 
-Data-Forge Plot is an add-on library to [Data-Forge](http://data-forge-js.com/) that adds charting and visualization capabilties. It's also a core technology underlying [Data-Forge Notebook](http://www.data-forge-notebook.com/), my application for notebook-style exploratory coding, data analysis and visualization in JavaScript.
+[Data-Forge Plot is an add-on library](https://www.npmjs.com/package/data-forge-plot) to [Data-Forge](http://data-forge-js.com/) that adds charting and visualization capabilties. It's also a core technology underlying [Data-Forge Notebook](http://www.data-forge-notebook.com/), my application for notebook-style exploratory coding, data analysis and visualization in JavaScript.
 
 It's important to note that Data-Forge Plot isn't a new charting library. There's already so many good ones available for JavaScript, I wouldn't want to write a new one and I wouldn't want to have to compete with any of the great options already on the table.
 
