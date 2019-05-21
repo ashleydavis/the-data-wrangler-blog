@@ -11,16 +11,6 @@ A new update on my progress with Data-Forge Plot - the plot function for Data-Fo
 "
 ---
 
-#todo before publish
-- Test render plugin.
-- Extract eaxmples to seperate repo
-- The readme for @data-forge-plot/chart-def, c3, apex and serialization.
-- Caption the images properly:
-    https://stackoverflow.com/questions/19331362/using-an-image-caption-in-markdown-jekyll
-
-
---
-
 I've recently made important progress with Data-Forge Plot, so this is a quick blog post to update you on where it's at and where it's going!
 
 First though, a reminder on what this is all about!
