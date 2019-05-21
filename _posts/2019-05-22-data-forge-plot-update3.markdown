@@ -31,8 +31,9 @@ As a further reminder of how it works, let me present some example JavaScript co
 
 We'll plot a chart from some data that looks like this.
 
-![Example data screenshot](/content/images/2019/05/Example_data.png)
-Figure 1
+| ![Example data screenshot](/content/images/2019/05/Example_data.png) |
+|:--:|
+| *Figure 1* |
 
 The following snippet of code reads the data file and produces a bar chart:
 
@@ -56,7 +57,7 @@ plot.renderImage("./my-chart.png");
 The resulting bar chart looks like this:
 
 ![Example bar chart](/content/images/2019/05/Example_bar_chart.png)
-Figure 2
+*Figure 2*
 
 ## So what's new?
 
@@ -68,7 +69,7 @@ The `renderImage` function (as seen in the code snippet above) has been factored
 [npm library](https://www.npmjs.com/package/@data-forge-plot/render).
 
 ![renderImage function extracted to own npm library](/content/images/2019/05/renderImage_function_extracted.png)
-Figure 3
+*Figure 3*
 
 Using the `renderImage` function now means you must install the additional library `@data-forge-plot/render`. It's not ideal having to install the extra library, but factoring out this library removes the large Nightmare/Electron dependency from the core Data-Forge Plot library.
 
@@ -81,7 +82,7 @@ It was always my intention to fully extract the chart templates from Data-Forge 
 Originally Data-Forge Plot only supported the C3 charting library was that was hard-coded, so I started by extracting this to its own [npm library](https://www.npmjs.com/package/@data-forge-plot/c3). I then created an entirely [new chart template for Data-Forge Plot based on ApexCharts](https://www.npmjs.com/package/@data-forge-plot/apex).
 
 ![Chart templates extract from the core library](/content/images/2019/05/Separated_chart_plugins.png)
-Figure 4
+*Figure 4*
 
 So Data-Forge Plot now supports two JavaScript charting libraries! It defaults to ApexCharts of course, because that's the better charting library - but it also optionally supports C3. 
 
@@ -90,7 +91,7 @@ So Data-Forge Plot now supports two JavaScript charting libraries! It defaults t
 In order to extract the chart templates into separate code libraries I needed to have them and Data-Forge Plot agree on the common structure of a chart. So I factored out [another npm library](https://www.npmjs.com/package/@data-forge-plot/chart-def) to contain the shared chart definition.
 
 ![Chart templates extract from the core library](/content/images/2019/05/Separated_chart_def.png)
-Figure 5
+*Figure 5*
 
 Another library makes this structure even more complex, but in this case it's necessary to prevent [circular dependencies](https://en.wikipedia.org/wiki/Circular_dependency). 
 
@@ -111,7 +112,7 @@ This feature allows charts to be created and saved in an abstract format. The ch
 To see what this looks like here's a screenshot of a time-series chart produced in Data-Forge Notebook. Note the button highlighted on the right-hand side that allows the user to choose which charting library is used to render the chart:
 
 ![Example time-series chart from Data-Forge Notebook](/content/images/2019/05/ApexCharts_line_chart.png)
-Figure 6
+*Figure 6*
 
 The concept of the *abstract chart defintion* means that charts can be saved in notebook files and be independent of any specific charting library. This mean a user can switch between charts to find a visualization library that best suits their needs. This also allows me as the developer to upgrade Data-Forge Notebook over time to support the latest and greatest JavaScript visualization libraries as they become available into the future. 
 
