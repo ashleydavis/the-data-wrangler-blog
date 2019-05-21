@@ -139,6 +139,6 @@ But wouldn't it be nice if you didn't even need Data-Forge?
 
 What if you could simply plot a chart directly from a JavaScript data structure or some JSON? 
 
-Well that's what I'm doing next. I now plan create a cut-down version of Data-Forge Plot that is independent of Data-Forge and will be simpler again to use. The name of the new library is currently undecided. 
+Well that's what I'm doing next. I'm now planning a cut-down version of Data-Forge Plot that is independent of Data-Forge and will be simpler again to use. The name of the new library is currently undecided. 
 
-Stay tuned!
+Please stay tuned!
