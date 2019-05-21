@@ -101,7 +101,7 @@ Another library makes this structure even more complex, but in this case it's ne
 
 All these libraries had to agree on an *abstract definition of a chart* so that Data-Forge Plot could be made fundamentally independent from any specific JavaScript visualization library and to prevent circular dependencies the chart templates couldn't have a dependency on Data-Forge Plot. 
 
-Note in *Figure 5* how Data-Forge Plot can reference either of the chart templates, but the reverse dependency doesn't exist. So a separate library was introduced as a home for the chart definition as is shown in *Figure 5*.
+Note in *Figure 4* how Data-Forge Plot can reference either of the chart templates, but the reverse dependency doesn't exist. So a separate library was introduced as a home for the chart definition as shown in *Figure 5*.
 
 ## The abstract chart definition
 
