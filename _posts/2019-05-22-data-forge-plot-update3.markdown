@@ -81,7 +81,7 @@ This change substanially reduces the Data-Forge Plot bundle size and is a necces
 
 It was always my intention to fully extract the chart templates from Data-Forge Plot and this has finally happened! 
 
-Originally Data-Forge Plot only supported the C3 charting library was that was hard-coded, so I started by extracting this to its own [npm library](https://www.npmjs.com/package/@data-forge-plot/c3). I then created an entirely [new chart template for Data-Forge Plot based on ApexCharts](https://www.npmjs.com/package/@data-forge-plot/apex).
+Originally Data-Forge Plot only supported the C3 charting library and that was hard-coded, so I started by extracting this to its own [npm library](https://www.npmjs.com/package/@data-forge-plot/c3). I then created an entirely [new chart template for Data-Forge Plot based on ApexCharts](https://www.npmjs.com/package/@data-forge-plot/apex).
 
 | ![Chart templates extract from the core library](/content/images/2019/05/Separated_chart_plugins.png) | 
 |:--:|
@@ -119,7 +119,7 @@ To see what this looks like here's a screenshot of a time-series chart produced 
 |:--:|
 | *Figure 6* | 
 
-The concept of the *abstract chart defintion* means that charts can be saved in notebook files and be independent of any specific charting library. This mean a user can switch between charts to find a visualization library that best suits their needs. This also allows me as the developer to upgrade Data-Forge Notebook over time to support the latest and greatest JavaScript visualization libraries as they become available into the future. 
+The concept of the *abstract chart defintion* means that charts can be saved in notebook files and be independent of any specific charting library. This means a user can switch between charts to find a visualization library that best suits their needs. This also allows me as the developer to upgrade Data-Forge Notebook over time to support the latest and greatest JavaScript visualization libraries as they become available into the future. 
 
 This is the breakthrough idea that allowed me to move forward in developing Data-Forge Notebook.
 
