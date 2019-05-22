@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 'Data-Forge Plot update 3'
+image: "/content/images/2019/05/ApexCharts_line_chart.png"
 date: '2019-05-22 07:30:00'
 permalink: data-forge-plot-update3/
 post_class: feature
