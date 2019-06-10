@@ -48,7 +48,7 @@ Data-Forge Notebook supports multiple export formats. You can export your notebo
 
 [Click here for an example notebook exported to markdown format](https://gist.github.com/ashleydavis/244b8f7ef91a36b7f8e1b2f0dd90c6f5).
 
-[Data-Forge Notebook](http://www.data-forge-notebook.com/) also supports TypeScript and it even does the TypeScript configuration for you. In addition it automatically creates your build script.  On top of all that it automatically installs npm peer dependenencies and TypeScript type definitions.
+[Data-Forge Notebook](http://www.data-forge-notebook.com/) also supports TypeScript and it even does the TypeScript configuration for you. In addition it automatically creates your build script.  On top of all that it automatically installs npm peer dependencies and TypeScript type definitions.
 
 Don't worry about project setup and configuration. Let Data-Forge Notebook do that for you! When finished export your notebook to runnable code so that you can run it in your production JavaScript environment!
 
