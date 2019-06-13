@@ -30,7 +30,7 @@ Visualize your output and data while you code to check that your code works as p
 
 ![Promo notebook](/content/images/2019/06/promo-notebook.png)
 
-Because Data-Forge Notebook is a desktop app and not a hosted web application, it puts your privacy found and center. You store all your code and data on your on your local PC and you don't have to submit them to someone's hosted service that in the cloud.
+Because Data-Forge Notebook is a desktop app and not a hosted web application, it puts your privacy found and center. You store all your code and data on your on your local PC and you don't have to submit them to someone's hosted service in the cloud.
 
 ## What can you do with it?
 
