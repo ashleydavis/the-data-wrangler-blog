@@ -34,7 +34,7 @@ Because Data-Forge Notebook is a desktop app and not a hosted web application, i
 
 ## What can you do with it?
 
-[Data-Forge Notebook](http://www.data-forge-notebook.com/) comes with an embedded portable version of Node.js. Any code that you can run under Node.js you can also run under Data-Forge Notebook.
+[Data-Forge Notebook](http://www.data-forge-notebook.com/) comes with an embedded portable version of Node.js. Any code that you can run under Data-Forge Notebook you can also run under Node.js.
 
 It is an environment for prototyping and exploratory data analysis. You can visualize JavaScript data, tabular data and easily create charts.
 
