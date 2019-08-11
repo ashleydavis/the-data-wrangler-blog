@@ -40,7 +40,7 @@ All applications grow complex over time. Microservices offers us a way better wa
 
 In my new book, Bootstrapping Microservices, I show that a microservices-first approach is no longer as daunting as it once was. I believe the balance is firmly tipping toward microservices. The main problem that remains is that learning microservices is still difficult. The learning curve is steep and holds back many developers in their quest to build microservices.  In this book we break through the learning curve. We say boo to the monolith and we build from the ground up, a simple, but complete, application using microservices.
 
-This book is different to other books on microservices. This book is not *theoretical*. Where other books leaving you wondering where to start, this one takes you a practical journey through learning. We will actually build a microservices application and the book is accompanied by working code examples hosted on GitHub.
+This book is different to other books on microservices. This book is not *theoretical*. Where other books leaving you wondering where to start, this one takes you on a practical journey through learning. We will actually build a microservices application and the book is accompanied by working code examples hosted on GitHub.
 
 The modern tooling that enables microservices is deep and complex, but this book is not about becoming an expert. It is about learning the thin crust of what's possible so that we can understand the big picture and use the tools to get our application off the ground. Plenty of references to other books will be provided for when you need to go deeper on any of the technologies.
 
