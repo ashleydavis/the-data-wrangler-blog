@@ -28,7 +28,7 @@ Conventional wisdom says that microservices are too difficult. We are told to st
 
 Your application was always going to tend toward complexity and eventually you will need to scale it. Building a monolith usually results in an unscalable and complex ball of spaghetti code that is difficult to manage and risky to deploy. 
 
-Then later when you do decide you need to convert your monolith to microservices, you have the extremely difficult job of safely converting your monolith to microservices when staff and customers already depend on it.
+Then later when you do decide you need to convert your monolith to microservices, you have the extremely difficult job of safely converting it when staff and customers already depend on it.
 
 ## Why microservices?
 
