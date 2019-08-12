@@ -34,7 +34,7 @@ Then later when you do decide you need to convert your monolith to microservices
 
 Now is the perfect time to be building microservices. The confluence of various factors -  easily accessible and cheap cloud infrastructure, increasingly good tools and growing opportunities for automation - has driven an industry-wide move toward smaller and smaller services.
 
-All applications grow complex over time. Microservices offers us a way better way to manage such complexity and build scaleable applications. With modern tooling like Docker, Kubernetes and Terraform we have some great tools at our disposal and it is easier than ever before to go microservices-first.
+All applications grow complex over time. Microservices offer us a way better way to manage such complexity and build scaleable applications. With modern tooling like Docker, Kubernetes and Terraform we have some great tools at our disposal and it is easier than ever before to go microservices-first.
 
 ## Why this book?
 
