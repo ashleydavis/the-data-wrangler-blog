@@ -16,7 +16,7 @@
 title: The Data Wrangler
 email: ashley@codecapers.com.au
 description: >- # this means to ignore newlines until "baseurl:"
-  The usings of Ashley Davis on data, visualizations, microservices and anything else that takes my fancy
+  The musings of Ashley Davis on data, visualization, microservices or whatever takes my fancy
 baseurl: "/" # the subpath of your site, e.g. /blog
 url: "http://www.the-data-wrangler.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: ashleydavis75
