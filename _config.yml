@@ -22,6 +22,7 @@ url: "http://www.the-data-wrangler.com" # the base hostname & protocol for your 
 twitter_username: ashleydavis75
 github_username:  ashleydavis
 logo: "/content/images/2016/12/Code-Capers_logos_sienna_lge---Copy.png"
+cover: "/content/images/2016/05/blog_banner-2.jpg"
 
 # Build settings
 # https://www.taniarascia.com/make-a-static-website-with-jekyll/comment-page-1/
