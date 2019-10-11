@@ -17,10 +17,6 @@ body_class: post-template
 
     <article class="post {{page.post_class}}">
 
-        {% include subscribe.html %}
-
-        <br>
-
         <div class="flex flex-wrap">
             <div class="w-full md:w-3/4 lg:w-3/4 xl:w-3/4">
                 <div class="pr-4">
@@ -76,8 +72,6 @@ body_class: post-template
                             </a>
                         </section>
 
-                        {% include subscribe.html %}
-
                     </footer>
                 </div>
             </div>
@@ -131,6 +125,9 @@ body_class: post-template
                             Learn more
                         </a>
                     </div>
+
+                    {% include subscribe.html %}
+
                 </aside>
             </div>
         </div>

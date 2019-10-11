@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'Crafting build pipelines with Docker'
-image: "/content/images/2019/10/crafting-build-pipelines-docker-header.jpeg"
+image: "/content/images/2019/10/crafting-build-pipelines-docker.jpeg"
 date: '2019-10-09 07:30:00'
 permalink: crafting-build-pipelines-with-docker/
 post_class: feature
