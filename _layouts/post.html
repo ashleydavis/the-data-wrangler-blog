@@ -23,73 +23,81 @@ body_class: post-template
 
         <div class="flex flex-wrap">
             <div class="w-full md:w-3/4 lg:w-3/4 xl:w-3/4">
-                <header class="post-header">
-                    <h1 class="post-title">{{page.title}}</h1>
-                    <section class="post-meta">
-                        <time class="post-date" datetime="{{page.date | date: "%e %b %Y"}}">{{page.date | date: "%e %b %Y"}}</time>
+                <div class="pr-4">
+                    <header class="post-header">
+                        <h1 class="post-title">{{page.title}}</h1>
+                        <section class="post-meta">
+                            <time class="post-date" datetime="{{page.date | date: "%e %b %Y"}}">{{page.date | date: "%e %b %Y"}}</time>
+                        </section>
+                    </header>
+
+                    <section class="post-content">
+
+                        <!-- Go to www.addthis.com/dashboard to customize your tools --> <div class="addthis_inline_follow_toolbox"></div>
+                        
+                        {{content}}
                     </section>
-                </header>
 
-                <section class="post-content">
+                    <footer class="post-footer">
 
-                    <!-- Go to www.addthis.com/dashboard to customize your tools --> <div class="addthis_inline_follow_toolbox"></div>
-                    
-                    {{content}}
-                </section>
-
-                <footer class="post-footer">
-
-                    {% if author.image %}
-                    <figure class="author-image">
-                        <a class="img" href="{{author.url}}" style="background-image: url({{author.image}})"><span class="hidden">{{author.name}}'s Picture</span></a>
-                    </figure>
-                    {% endif %}
-
-                    <section class="author">
-                        <h4><a href="{{url}}">{{author.name}}</a></h4>
-
-                        {% if author.bio %}
-                            <p>{{author.bio}}</p>
-                        {% else %}
-                            <p>Read <a href="{{author.url}}">more posts</a> by this author.</p>
+                        {% if author.image %}
+                        <figure class="author-image">
+                            <a class="img" href="{{author.url}}" style="background-image: url({{author.image}})"><span class="hidden">{{author.name}}'s Picture</span></a>
+                        </figure>
                         {% endif %}
-                        <div class="author-meta">
-                            {% if author.location %}<span class="author-location icon-location">{{author.location}}</span>{% endif %}
-                            {% if author.website %}<span class="author-link icon-link"><a href="{{author.website}}">{{author.website}}</a></span>{% endif %}
-                        </div>
-                    </section>
 
-                    <section class="share">
-                        <h4>Share this post</h4>
-                        <a class="icon-twitter" href="https://twitter.com/intent/tweet?text={{page.title}}&amp;url={{site.url}}{{page.url}}"
-                            onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
-                            <span class="hidden">Twitter</span>
-                        </a>
-                        <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u={{site.url}}{{page.url}}"
-                            onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
-                            <span class="hidden">Facebook</span>
-                        </a>
-                        <a class="icon-google-plus" href="https://plus.google.com/share?url={{site.url}}{{page.url}}"
-                        onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
-                            <span class="hidden">Google+</span>
-                        </a>
-                    </section>
+                        <section class="author">
+                            <h4><a href="{{url}}">{{author.name}}</a></h4>
 
-                    {% include subscribe.html %}
+                            {% if author.bio %}
+                                <p>{{author.bio}}</p>
+                            {% else %}
+                                <p>Read <a href="{{author.url}}">more posts</a> by this author.</p>
+                            {% endif %}
+                            <div class="author-meta">
+                                {% if author.location %}<span class="author-location icon-location">{{author.location}}</span>{% endif %}
+                                {% if author.website %}<span class="author-link icon-link"><a href="{{author.website}}">{{author.website}}</a></span>{% endif %}
+                            </div>
+                        </section>
 
-                </footer>
+                        <section class="share">
+                            <h4>Share this post</h4>
+                            <a class="icon-twitter" href="https://twitter.com/intent/tweet?text={{page.title}}&amp;url={{site.url}}{{page.url}}"
+                                onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                                <span class="hidden">Twitter</span>
+                            </a>
+                            <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u={{site.url}}{{page.url}}"
+                                onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                                <span class="hidden">Facebook</span>
+                            </a>
+                            <a class="icon-google-plus" href="https://plus.google.com/share?url={{site.url}}{{page.url}}"
+                            onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                                <span class="hidden">Google+</span>
+                            </a>
+                        </section>
+
+                        {% include subscribe.html %}
+
+                    </footer>
+                </div>
             </div>
             <div class="w-full md:w-1/4 lg:w-1/4 xl:w-1/4">
                 <aside>
+                    <h3><b>Support</b> my work:</h3>
                     <div 
                         class="flex flex-col items-center text-center border rounded dfn-ad p-4"
                         style="background-color: #4182E4;"
                         >
-                        <img 
-                            class="w-full" 
-                            src="https://www.data-forge-notebook.com/images/logo.png" 
-                            alt="Data-Forge Notebook"
+                        <a 
+                            target="_blank"
+                            href="https://www.data-forge-notebook.com" 
                             >
+                            <img 
+                                class="w-full" 
+                                src="/content/images/2019/10/dfn-logo.png" 
+                                alt="Data-Forge Notebook"
+                                >
+                        </a>
                         <div class="text-2xl mt-4 leading-normal">Exploratory coding, data analysis and visualization for JavaScript and TypeScript</div>
                         <a 
                             target="_blank"
@@ -98,7 +106,30 @@ body_class: post-template
                             >
                             Learn more
                         </a>
-                        <div class="text-2xl mt-4 leading-snug"><span class="font-bold">40% off</span> with discount code TDW201910</div>
+                        <div class="text-2xl mt-4 leading-snug">Limited availability <span class="font-bold">40% off</span> with discount code TDW201910</div>
+                    </div>
+                    <div 
+                        class="flex flex-col items-center text-center border rounded dfn-ad p-4 mt-8"
+                        style="background-color: #01313F;"
+                        >
+                        <a 
+                            target="_blank"
+                            href="http://bit.ly/2t2cJu2" 
+                            >
+                            <img 
+                                class="w-full" 
+                                src="/content/images/2019/10/JSDW.png" 
+                                alt="Data Wrangling with JavaScript"
+                                >
+                        </a>
+                        <div class="text-2xl mt-4 leading-normal">A practical and comprehensive guide to working with data in JavaScript</div>
+                        <a 
+                            target="_blank"
+                            href="http://bit.ly/2t2cJu2" 
+                            class="inline-block font-bold border rounded text-blue-500 border-white hover:text-blue-700 bg-white p-8 pt-3 pb-3 mt-8"
+                            >
+                            Learn more
+                        </a>
                     </div>
                 </aside>
             </div>
