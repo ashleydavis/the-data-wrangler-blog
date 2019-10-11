@@ -567,6 +567,12 @@ body.nav-opened .site-wrapper {
    4. General - The main styles for the the theme
    ========================================================================== */
 
+main {
+    width: auto;
+    max-width: 1000px;
+    margin: 4rem auto;
+}
+
 /* Big cover image on the home page */
 .main-header {
     position: relative;
