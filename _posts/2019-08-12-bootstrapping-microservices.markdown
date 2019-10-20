@@ -14,6 +14,8 @@ I've announced my new book! Bootstrapping microservices is a practical and proje
 
 I have a new book on the horizon: Bootstrapping Microservices with Docker, Kubernetes and Terraform. In this blog post I explain why I'm writing this book and why you'll want to read it.
 
+The [early access program for Bootstrapping Microservices](http://bit.ly/2o0aDsP) has started. This is your opportunity to support this new book at an early stage. Get the chapters as they are published and give feedback that can influence the direction of the book as it is developed!
+
 As software continues to grow and become complicated we need better ways of managing and mitigating the complexity. As it grows alongside our business we need better ways of dividing it up so multiple teams can participate in the construction effort. As our demanding customer-base expands we must also be able to expand our software. At the same time our applications should be fault-tolerant and able to scale-up quickly to match peak demand.
 
 How do we meet the demands of the modern business while evolving and developing our software? 
