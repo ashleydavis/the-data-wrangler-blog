@@ -38,7 +38,7 @@ Updating the code for a monolith is a risky affair. It’s all or nothing. When 
 
 In addition, as the structure of the monolith degenerates, our risk of breaking it in unanticipated ways increases. Testing becomes harder and breeds yet more deployment fear. Have I convinced you that you should try microservices? Wait there’s more!
 
-*Monoliths come with increased deployment risk:* Pushing a breaking code change, breaks our entire monolith. Increased deployment risk leads to deployment fear. Fear slows the pace of development.
+**Monoliths come with increased deployment risk:** Pushing a breaking code change, breaks our entire monolith. Increased deployment risk leads to deployment fear. Fear slows the pace of development.
 
 Due to the sheer size of an established monolith it is very problematic to test. Due to its granularity it is very difficult to scale. Eventually the monolith expands to consume the physical limits of the machine it runs on. As the aging monolith consumes more and more physical resources it becomes more expensive to run. I have witnessed this! 
 To be fair this kind of thing might be a long way off for any monolith, but even after just a few years of growth the monolith leads to a place that you would prefer not to be.
@@ -47,7 +47,7 @@ Despite the eventual difficulties with the monolith, it remains the simplest way
 
 My answer: it depends. Many applications will always be small. There are plenty of small monoliths in the wild that do their job well and don’t need to be scaled or evolved. They are not growing and they do not suffer the problems of growth. If you believe your application will remain small, simple and doesn’t need to evolve: you should definitely build it as a monolith.
 
-*Easy to start, but difficult later:* The monolith may be the simplest way to start development, but there are many real and difficult problems we will face further along that road.
+**Easy to start, but difficult later:** The monolith may be the simplest way to start development, but there are many real and difficult problems we will face further along that road.
 However, there are many applications that we can easily predict will benefit from a microservices-first approach. These are the kinds of applications we know will continually be evolved over many years. Other applications that can benefit are those that need to be flexible, scalable or have security constraints from the start. Building these types of applications is much easier if you start with microservices, because converting an existing monolith is difficult and risky.
 
 By all means if you need to validate your business idea first, please do so by first building a monolith. However even in this case I would argue that with the right tooling, prototyping with microservices isn’t much more difficult than prototyping with a monolith. After all, what is a monolith, if not a single large service? 
