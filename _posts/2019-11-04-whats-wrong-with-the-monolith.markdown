@@ -12,7 +12,9 @@ The microservices architecture is an increasingly popular alternative to monolit
 "
 ---
 
-The microservices architecture is an increasingly popular alternative to monolithic application development. But what is a monolith and what exactly is wrong with it?
+We are hearing about microservices everywhere. This architecture is an increasingly popular alternative to traditional monolithic application development. 
+
+But what is a monolith and what exactly is wrong with it?
 
 In this blog post we'll explore what a monolith is and what is so wrong with it that we’d like to use microservices instead.
 
