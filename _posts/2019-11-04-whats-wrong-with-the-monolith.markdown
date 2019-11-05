@@ -57,3 +57,5 @@ By all means if you need to validate your business idea first, please do so by f
 You might even consider using the techniques in [Bootstrapping Microservices](http://bit.ly/2o0aDsP) to bootstrap your monolith as single service within a Kubernetes cluster. Now you have the best of both worlds! When the time comes to decompose to microservices, you are already in the best possible position to do so and at your leisure you can start chipping microservices off the monolith. And with the ease of automated deployment that modern tooling offers it is easy to teardown and recreate your application or create replica environments for development and testing. So if you want or need to create a monolith first you can still benefit from the techniques and technologies presented in the book.
 
 Read more about microservices in [Bootstrapping Microservices with Docker, Kubernetes and Terraform](http://bit.ly/2o0aDsP) by Ashley Davis.
+
+![Bootstrapping Microservices](/content/images/2019/11/bootstrapping-microservices-header.png)
