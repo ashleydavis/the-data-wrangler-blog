@@ -1,9 +1,9 @@
 ---
 layout: post
-title: The quick guide to creating Kubernetes cluster
+title: The quick guide to creating a Kubernetes cluster
 image: "/content/images/2019/12/1280px-Kubernetes_logo.svg.png"
 date: '2019-12-04 19:30:00'
-permalink: whats-wrong-with-the-monolith/
+permalink: kub-cluster-quick/
 post_class: feature
 disqus_id: kub-cluster-quick
 published: true
