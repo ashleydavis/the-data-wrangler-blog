@@ -130,7 +130,7 @@ Again we are presented with wall of JSON data. We'll use JMESPath to pluck the m
 az aks get-versions --location australiaeast --query "orchestrators[-1].orchestratorVersion" --output tsv
 ```
 
-Take note of the version number. At the time of writing the latest version in my location is `1.14.8` so that's the version I'm using for this blog post.
+Take note of the version number. At the time of writing, the latest version in my location is `1.14.8` so that's the version I'm using for this blog post.
 
 ## Create a resource group
 
@@ -138,19 +138,19 @@ We need to create an [Azure resource group](https://docs.microsoft.com/en-us/azu
 
     az group create --name my-kub-test --location australiaeast
 
-A resource group is just a way to collect and manage multiple cloud resources. 
+A resource group is a way to collect and manage groups of cloud resources. 
 
-I've called my mine resource group my-kub-test, you should probably choose a better name. Prefer a name that indicates your intended use of the resource group.
+I've called my resource group `my-kub-test`, you should probably choose a better name. Prefer a name that indicates your intended use of the resource group.
 
 You can test that your resource group was created with this command:
 
     az group list --output table
 
-If that's the first group you ever created your list will contain only have a single resource group.
+You should see your new resource group in the output. If it's the first group you created, that's all you'll see.
 
 ## Create your Kubernetes cluster
 
-We are now ready to create our Kuberntes cluster. Here's the command:
+We are now ready to create our Kubernetes cluster. Here's the command:
 
     az aks create --resource-group my-kub-test --name test-kub-cluster --location australiaeast --kubernetes-version 1.14.8
 
@@ -220,7 +220,7 @@ If you followed along with this post you created (and then destroyed) a Kubernet
 
 ## Resources:
 
-- Kuberntes on Azure: https://azure.microsoft.com/en-au/services/kubernetes-service/
+- Kubernetes on Azure: https://azure.microsoft.com/en-au/services/kubernetes-service/
 - Installing kubectl: https://kubernetes.io/docs/tasks/tools/install-kubectl/
 - Kubectl cheat sheet: https://linuxacademy.com/site-content/uploads/2019/04/Kubernetes-Cheat-Sheet_07182019.pdf
 - Azure cli ref: https://docs.microsoft.com/en-us/cli/azure/reference-index?view=azure-cli-latest
