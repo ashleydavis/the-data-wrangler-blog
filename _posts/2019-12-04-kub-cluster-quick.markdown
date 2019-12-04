@@ -1,7 +1,7 @@
 ---
 layout: post
 title: The quick guide to creating a Kubernetes cluster
-image: "/content/images/2019/11/1280px-Kubernetes_logo.svg.png"
+image: "/content/images/2019/11/kub-header.png"
 date: '2019-12-04 19:30:00'
 permalink: kub-cluster-quick/
 post_class: feature
@@ -31,7 +31,7 @@ Just make sure you tear it all down afterward, otherwise you'll have to start pa
 
 In this post I use the Azure cli tool from the terminal to construct a Kubernetes cluster. It's a nice tool, pretty straight forward and you can do everything without leaving the terminal. It is even easier to do this kind of thing using the UI in the [Azure portal](https://portal.azure.com/), but that's not automatable. 
 
-The nice thing about working with the terminal is that you can build shell scripts to do this kind of thing. So once you have read this post and understood the commands you can put them all in a "make_kubernetes_cluster.sh" shell script and use it quickly instantiate a new cluster anytime you need one.
+The nice thing about working with the terminal is that you can build shell scripts to do this kind of thing. So once you have read this post and understood the commands you can put them all in a "make_kubernetes_cluster.sh" shell script and use it to quickly instantiate a new cluster anytime you need one.
 
 In my new book [Bootstrapping Microservices](http://bit.ly/2o0aDsP) I show how to create a Kubernetes cluster using a Terraform script.
 
