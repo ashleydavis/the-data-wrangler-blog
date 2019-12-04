@@ -18,6 +18,10 @@
   url: http://dfcheatsheet.the-data-wrangler.com
   new_tab: true
 
+- label: Kubernetes
+  url: /kub-cluster-quick
+  slug: kub-cluster-quick
+
 - label: Vagrant 
   url: /getting-started-with-vagrant
   slug: getting-started-with-vagrant
