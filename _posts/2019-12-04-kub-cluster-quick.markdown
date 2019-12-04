@@ -70,7 +70,7 @@ Invoke this command:
 
     az account list
 
-By itself that command outputs in JSON format. If you only just signed up to Azure or if you only have one account you should see only a single account in that list.
+By itself that command outputs in JSON format. If you only just signed up to Azure or if you only have one account, you should see only a single account in that list.
 
 If you do happen to have a lot of accounts in the list, you can make the output more readable by using the table output format as follows:
 
@@ -124,7 +124,7 @@ With your location selected you can now check out which version of Kubernetes ar
 
 Just replace `australiaeast` with your  prefered location.
 
-Again we are presented with wall of JSON data. We'll use JMESPath to pluck the most recent version with tsv output for readbility:
+Again we are presented with a wall of JSON data. We'll use JMESPath to pluck the most recent version with tsv output for readbility:
 
 ```
 az aks get-versions --location australiaeast --query "orchestrators[-1].orchestratorVersion" --output tsv
