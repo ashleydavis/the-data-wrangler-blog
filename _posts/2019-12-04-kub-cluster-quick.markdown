@@ -70,7 +70,7 @@ Invoke this command:
 
     az account list
 
-By itself that command outputs in JSON format. If you only just signed up to Azure or if you only have one account you should see only a single account in the list.
+By itself that command outputs in JSON format. If you only just signed up to Azure or if you only have one account you should see only a single account in that list.
 
 If you do happen to have a lot of accounts in the list, you can make the output more readable by using the table output format as follows:
 
@@ -78,19 +78,19 @@ If you do happen to have a lot of accounts in the list, you can make the output 
 
 Note which of your accounts has `IsDefault` set to `True`. If you only have one account it should be that one. The default account is the one that we'll be working with. When you create your Kubernetes cluster and other resources, they will appear in that account. 
 
-So we need to make sure the account marked as default is the one where the resources should be created. For example if you have work accounts in your list you probably don't want to be making experimental Kubernetes clusters in them!
+So we need to make sure the account we want to work with is the default one. If you have work accounts in your list you probably don't want to be making experimental Kubernetes clusters in them!
 
 Here's another way to see just what your default Azure account is:
 
     az account show
 
-If that isn't the account you should be using for this experimental work, you'll need to change which account is the default. Use `az account list --output table` and pick the account you want to use. Take note of the `SubscriptionId` for that account. You need to provide this number to set the account as the default.
+If that isn't the account you want to use for this experimental work, you'll need to change the default account. Use `az account list --output table` and pick the account you want to use. Take note of the `SubscriptionId` for that account. You need to provide this number to set that account as the default.
 
-Use the following command to set the default account:
+Use the following command to set your default account:
 
     az account set --subscription <your-subscription-id>
 
-Please replace &lt;your-subscription-id&gt; with the particular subscriptiopn ID for your account.
+Please replace &lt;your-subscription-id&gt; with the particular subscription ID for your account.
 
 After changing the default account, check one last time to make sure you are using the account you think you are:
 
