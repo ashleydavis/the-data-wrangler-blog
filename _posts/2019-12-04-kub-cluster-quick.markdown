@@ -46,9 +46,11 @@ You need the Azure cli tool installed: https://docs.microsoft.com/en-us/cli/azur
 
 First open a terminal and check that the Azure cli tool is installed:
 
-    az --version
+```
+az --version
+```
 
-You should output similar to this:
+You should see output similar to this:
 
     azure-cli (2.0.28)
 
