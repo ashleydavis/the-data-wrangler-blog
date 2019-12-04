@@ -158,52 +158,52 @@ Now you have to wait! This part can take some time, so go make a coffee.
 
 ## Check your cluster
 
-Let's check your cluster is ok. List resource groups:
+Let's check your cluster is ok. List your resource groups:
 
     az group list --output table
 
 You should have a couple of extra resource groups now. Of course there's `my-kub-test` that we explictly created earlier and contains your managed Kubernetes cluster.
 
-You'll note there's a couple of other resource groups that have been automatically created. The first is `MC_my-kub-test_test-kub-cluster_australiaeast`, although the name of this might be different for you because it's generated from the name of your resource group, the name of your cluster and your selected location. This group contains additional resources created for the managed cluster. We'll have a look at the resources in it in a moment.
+You'll note there's a couple of other resource groups that have been automatically created. The first has a long generated name like `MC_my-kub-test_test-kub-cluster_australiaeast`. That name might be different for you because it's generated from the name of your resource group, the name of your cluster and your selected location. This group contains additional resources created for the managed cluster. We'll have a look at it's  resources in a moment.
 
-There's another group [NetworkWatcherRG](https://azure.microsoft.com/en-us/updates/azure-network-watcher-will-be-enabled-by-default-for-subscriptions-containing-virtual-networks/) that is also automatically created. This has something to do with debugging and trouble shooting for your virtual network (which was created automatically for you).
+There's another group [NetworkWatcherRG](https://azure.microsoft.com/en-us/updates/azure-network-watcher-will-be-enabled-by-default-for-subscriptions-containing-virtual-networks/) that is automatically created. This has something to do with debugging and trouble shooting for your virtual network (which was created automatically for you).
 
 Now try listing the resources in your `my-kub-test` resource group:
 
     az resource list --resource-group my-kub-test --output table
 
-You should see just one resource (unless you started with a resource group that already had existing resources in it).  The resource you should see is for your managed Kubernetes cluster.
+You should see just one resource (unless you started with a resource group that already had existing resources in it).  The resource you should see is your managed Kubernetes cluster.
 
 Now take a look at the contents of the automatically generated `MC_my-kub-test_test-kub-cluster_australiaeast` resource group
 
     az resource list --resource-group MC_my-kub-test_test-kub-cluster_australiaeast --output table
 
-This time you should see a bigger list of resources. These are all the resources that were automatically created to support your managed Kubernetes cluster. In the list you'll see things like virtual machines, virtual disks and virtual networks. This is all the stuff you are paying for! (after your $200 credit runs out). Be sure to delete it when you are done! Also try not to manually tweak anything in this list! If you do that could you break your 
+This time you should see a bigger list of resources. These are all the resources that were automatically created to support your managed Kubernetes cluster. In the list you'll see things like virtual machines, virtual disks and virtual networks. This is all the stuff you are paying for! (after your $200 credit runs out). Be sure to delete it when you are done! Also try not to manually tweak anything in this list! If you do that could break your 
 cluster.
 
 ## Interface with your cluster 
 
-What good is a Kubernetes cluster if you can't interact with it to deploy your application. 
+What good is a Kubernetes cluster if you can't interact with it to deploy your application? So let's get setup for that.
 
 For this you need the Kubectl tool installed: https://kubernetes.io/docs/tasks/tools/install-kubectl/
 
 After installing Kubectl, use the following command to download credentials for your cluster:
 
     az aks get-credentials --resource-group my-kub-test --name test-kub-cluster
-e
-This downloads credentials and sets up the keys so you can run Kubectl and interact with your cluster.
 
-To test run the following command:
+This downloads credentials so you can run Kubectl and interact with your cluster.
+
+Test run with the following command:
 
     kubectl get nodes
 
-You should see a list of the nodes in your cluster!
+You should see a list of the nodes in your cluster! You can now use Kubectl manage your cluster. Happy days.
 
 ## Tear down
 
 When you are done don't forget to tear down your cluster and all the resources that were created.
 
-Azure resource groups make this easy, you just to delete resource group `my-kub-test`:
+Azure resource groups make this easy, just delete the main resource group `my-kub-test`:
 
     az group delete --name my-kub-test
 
