@@ -126,7 +126,9 @@ Just replace `australiaeast` with your  prefered location.
 
 Again we are presented with wall of JSON data. We'll use JMESPath to pluck the most recent version with tsv output for readbility:
 
-    az aks get-versions --location australiaeast --query "orchestrators[-1].orchestratorVersion" --output tsv
+```
+az aks get-versions --location australiaeast --query "orchestrators[-1].orchestratorVersion" --output tsv
+```
 
 Take note of the version number. At the time of writing the latest version in my location is `1.14.8` so that's the version I'm using for this blog post.
 
