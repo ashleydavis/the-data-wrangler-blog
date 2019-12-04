@@ -1,7 +1,7 @@
 ---
 layout: post
 title: The quick guide to creating a Kubernetes cluster
-image: "/content/images/2019/12/1280px-Kubernetes_logo.svg.png"
+image: "/content/images/2019/11/1280px-Kubernetes_logo.svg.png"
 date: '2019-12-04 19:30:00'
 permalink: kub-cluster-quick/
 post_class: feature
@@ -16,7 +16,7 @@ Did you ever find yourself needing a Kubernetes cluster quickly because you want
 
 Being able to create a Kubernetes cluster quickly is really useful whether you are writing books and blog posts on it (like me) or even if you are just wanting to learn Kubernetes and need an empty cluster to play with.
 
-If that sounds like you then read this post and follow along with it. This is intended to be the simplest and quickest way to produce a Kubernetes cluster in the shortest amount of time. I've created Kubernetes clusters so many times I thought it was time to write it down - if only to be read by my future self the next time I need to do this.
+If that sounds appealing, please read this post and even follow along with it to build your own cluster. This is intended to be the simplest and quickest way to produce a Kubernetes cluster in the shortest amount of time. I've created Kubernetes clusters so many times I thought it was time to write it down - if only for my future self for the next time I need to do this.
 
 ![Kubernetes!](/content/images/2019/11/1280px-Kubernetes_logo.svg.png)
 
