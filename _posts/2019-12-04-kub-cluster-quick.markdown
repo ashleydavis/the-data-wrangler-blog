@@ -22,9 +22,9 @@ If that sounds appealing, please read this post and even follow along with it to
 
 ## Why Azure?
 
-I create my [Kubernetes clusters on Azure](https://azure.microsoft.com/en-au/services/kubernetes-service/). Why is that so? It's because it's easy and to a large extent it's what I know. I also enjoy the experience and the Azure cli tool makes a lot of sense. Microsoft have gone out of their way to make Azure friendly to developers and it shows, recently I tried to do this on AWS and it was way more complicated.
+I create my [Kubernetes clusters on Azure](https://azure.microsoft.com/en-au/services/kubernetes-service/). Why is that? It's because it's easy and to a large extent it's what I know. I also enjoy the experience and the Azure cli tool makes a lot of sense. Microsoft have gone out of their way to make Azure friendly to developers and it shows, recently I tried to do this on AWS and it was way more complicated.
 
-Azure have $200 credit for new sign ups, so you can play with this stuff for a month before you start start paying real money for it.
+Azure have $200 credit for new sign ups, so you can play with this stuff for a month before you start paying real money for it.
 Just make sure you tear it all down afterward, otherwise you'll have to start paying for it!
 
 ## Azure cli
