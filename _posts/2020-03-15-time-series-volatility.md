@@ -14,7 +14,8 @@ This blog post shows how to compute percent volatility for time series data.
 
 **Computing stock price volatility with Data-Forge**
 
-This blog post exported from [Data-Forge Notebook](http://www.data-forge-notebook.com)
+This blog post exported from [Data-Forge Notebook](http://www.data-forge-notebook.com).
+You can edit and evaluate this example notebook using [Data-Forge Notebook](http://www.data-forge-notebook.com)
 
 This is an example JavaScript notebook that shows how to use the [`percentRange`](https://data-forge.github.io/data-forge-ts/classes/series.html#percentrange) function from the [Data-Forge](http://www.data-forge-js.com/) code library to compute volatility for time series data.
 
