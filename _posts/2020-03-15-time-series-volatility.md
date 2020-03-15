@@ -19,7 +19,7 @@ You can edit and evaluate this example notebook using [Data-Forge Notebook](http
 
 This is an example JavaScript notebook that shows how to use the [`percentRange`](https://data-forge.github.io/data-forge-ts/classes/series.html#percentrange) function from the [Data-Forge](http://www.data-forge-js.com/) code library to compute volatility for time series data.
 
-As an example we are computing the 5-day volatility for Microsoft's stock price. This is particularly interesting because we can see how the recent plunge in the stock market has affected volatility of the stock.
+For the example we are computing the 5-day volatility for Microsoft's stock price. This is particularly interesting because we can see how the recent plunge in the stock market has affected volatility of the stock.
 
 ## Import code libraries
 
