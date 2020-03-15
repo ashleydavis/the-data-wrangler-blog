@@ -8,7 +8,7 @@ post_class: feature
 disqus_id: time-series-volatility
 published: true
 excerpt: "
-dada
+This blog post shows how to compute percent volatility for time series data.
 "
 ---
 
