@@ -14,12 +14,19 @@ This blog post shows how to compute percent volatility for time series data.
 
 **Computing stock price volatility with Data-Forge**
 
-This blog post exported from [Data-Forge Notebook](http://www.data-forge-notebook.com).
-You can edit and evaluate this example notebook using [Data-Forge Notebook](http://www.data-forge-notebook.com)
+This blog post was exported from [Data-Forge Notebook](http://www.data-forge-notebook.com). You can edit and evaluate this notebook with Data-Forge Notebook.
 
-This is an example JavaScript notebook that shows how to use the [`percentRange`](https://data-forge.github.io/data-forge-ts/classes/series.html#percentrange) function from the [Data-Forge](http://www.data-forge-js.com/) code library to compute volatility for time series data.
+This is an example JavaScript notebook that shows how to use the [`percentRange`](https://data-forge.github.io/data-forge-ts/classes/series.html#percentrange) function from the [Data-Forge](http://www.data-forge-js.com/) code library to compute percent volatility for time series data.
 
-For the example we are computing the 5-day volatility for Microsoft's stock price. This is particularly interesting because we can see how the recent plunge in the stock market has affected volatility of the stock.
+In this post we are computing the 5-day volatility for Microsoft's stock price. This is particularly interesting because we can see how the recent plunge in the stock market has affected volatility of the stock.
+
+## Install code libraries
+
+If you are using Data-Forge Notebook simply *requiring* the libraries (as shown in the next section) means those libraries will be automatically installed. If you are using Node.js you'll have to install the code libraries manually as follows:
+
+```
+npm install --save datakit data-forge dayjs
+```
 
 ## Import code libraries
 
@@ -33,13 +40,14 @@ const dayjs = require("dayjs");
 
 ## Load data
 
-Load the data from a CSV file into a dataframe:
+Load the data from a CSV file into a dataframe and preview the first 3 rows:
 
 ```javascript
 const data = 
     await datakit.readCsv("./MSFT.csv", { // Load data.
         parser: { 
-            timestamp: v => dayjs(v, "YYYY-MM-DD").toDate(),
+            timestamp: 
+                v => dayjs(v, "YYYY-MM-DD").toDate(), // Parse dates.
         },
     }); 
 let df = new DataFrame(data);   // Load data into dataframe.
@@ -54,7 +62,7 @@ display(df.head(3));            // Preview our data.
 
 ## Compute volatility
 
-Here we compute percentage volatility of closing price over a 5-day period (how much % the stock has changed over the week) and integate it back into the dataframe as a "volatility" series:
+Here we compute percentage volatility of closing price over a 5-day period (how much % the stock has changed over the week):
 
 ```javascript
 const volatility =
@@ -85,7 +93,7 @@ display(df.skip(4).head(3));        // Preview integrated data.
 | 5         | 2019-12-10 00:00:00 | 151.29 | 151.89 | 150.765 | 151.13 | 16481060 | 148.18666666666667 | 1.26       |
 | 6         | 2019-12-11 00:00:00 | 151.54 | 151.87 | 150.33  | 151.7  | 18860001 | 148.48233333333334 | 1.2        |
 
-## Plot data
+## Plot chart
 
 Plot the closing price against our computed % volatility. Notice how volatility increases quickly as the stock prices drops:
 
@@ -98,5 +106,12 @@ display.plot(
 ```
 ![Chart](/content/time-series-volatility/images/cell_11_output_1.png)
 
+## What can we do with this?
 
-You can edit and evaluate this example notebook using [Data-Forge Notebook](http://www.data-forge-notebook.com)
+Volatility is used to assess how much a time series is fluctuating. You can use this in your trading strategy however you like. Does your strategy rely on highly volatile stocks? This is how you can measure that. Do you prefer to invest in less volatile stocks? This can do that as well. 
+
+You might even use volatility as a market filter, only trading either if the market is highly volatile or less volatile, depending on the needs your strategy!
+
+---
+
+You can edit and evaluate this example notebook with [Data-Forge Notebook](http://www.data-forge-notebook.com)
