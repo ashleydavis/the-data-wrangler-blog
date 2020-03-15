@@ -64,7 +64,7 @@ svg:not(:root) { overflow: hidden; }
 figure { margin: 1em 40px; }
 hr { box-sizing: content-box; height: 0; }
 pre { overflow: auto; }
-code, kbd, pre, samp { font-size: 1em; }
+kbd, pre, samp { font-size: 1em; }
 button, input, optgroup, select, textarea {
     color: inherit;
     font: inherit;
@@ -95,7 +95,6 @@ fieldset {
 legend { border: 0; padding: 0; }
 textarea { overflow: auto; }
 optgroup { font-weight: bold; }
-table{ border-collapse: collapse; border-spacing: 0; }
 td, th{ padding: 0; }
 
 
@@ -382,49 +381,6 @@ kbd {
     box-shadow:
         0 1px 0 rgba(0, 0, 0, 0.2),
         0 1px 0 0 #fff inset;
-}
-
-table {
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    margin: 1.75em 0;
-    width: 100%;
-    max-width: 100%;
-    background-color: transparent;
-}
-
-table th,
-table td {
-    padding: 8px;
-    line-height: 20px;
-    text-align: left;
-    vertical-align: top;
-    border-top: #EFEFEF 1px solid;
-}
-
-table th { color: #000; }
-
-table caption + thead tr:first-child th,
-table caption + thead tr:first-child td,
-table colgroup + thead tr:first-child th,
-table colgroup + thead tr:first-child td,
-table thead:first-child tr:first-child th,
-table thead:first-child tr:first-child td {
-    border-top: 0;
-}
-
-table tbody + tbody { border-top: #EFEFEF 2px solid; }
-
-table table table { background-color: #FFF; }
-
-table tbody > tr:nth-child(odd) > td,
-table tbody > tr:nth-child(odd) > th {
-    background-color: #F6F6F6;
-}
-
-table.plain tbody > tr:nth-child(odd) > td,
-table.plain tbody > tr:nth-child(odd) > th {
-   background: transparent;
 }
 
 iframe, .fluid-width-video-wrapper {
