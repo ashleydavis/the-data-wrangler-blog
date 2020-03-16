@@ -62,7 +62,7 @@ display(df.head(3));            // Preview our data.
 
 ## Compute volatility
 
-Here we compute percentage volatility of closing price over a 5-day period (how much % the stock has changed over the week):
+Here we compute percentage volatility of the closing price over a 5-day period (how much % the stock has changed over the week):
 
 ```javascript
 const volatility =
@@ -109,6 +109,8 @@ display.plot(
 ## What can we do with this?
 
 Volatility is used to assess how much a time series is fluctuating. You can use this in your trading strategy however you like. Does your strategy rely on highly volatile stocks? This is how you can measure that. Do you prefer to invest in less volatile stocks? This can do that as well. 
+
+Volatility is also a useful measure of potential risk and/or profit. The amount of movement in the past day, week or month gives you some indication of how far down (potential risk) or far up (potential profit) the stock might move if you held a position for that long. Better yet use a moving average of volatility to take the average of past volatility into account.
 
 You might even use volatility as a market filter, only trading either if the market is highly volatile or less volatile, depending on the needs your strategy!
 
