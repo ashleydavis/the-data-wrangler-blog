@@ -2207,3 +2207,16 @@ body:not(.post-template) .post-title {
     font-family: 'Raleway', sans-serif;
     color: white;
 }
+
+.df-ad-sponsor-link a:link {
+    color: white;
+}
+
+.df-ad-sponsor-link a:hover {
+    color: yellow;
+}
+
+.df-ad-sponsor-link a:active {
+    color: yellow;
+}
+
