@@ -357,7 +357,7 @@ This function itself is asynchronous (difficulty no. 1), and we should not invok
 
 If you peruse the debugger code, you’ll find multiple places where I use `fs.writeSync` ([here, for example](https://github.com/ashleydavis/debugging-async-operations-in-nodejs/blob/8deb9caff48bcfc82cab59f17b7f37ba60d548db/lib/async-debugger.js#L101)) to generate debug output. Listing 8 shows you an example.
 
-### [Listing 8](https://github.com/ashleydavis/debugging-async-operations-in-nodejs/blob/8deb9caff48bcfc82cab59f17b7f37ba60d548db/lib/async-debugger.js#L9): Logging debug output from the async tracker
+### Listing 8: Logging debug output from the async tracker
 
 ```javascript
 fs.writeSync(1, `total #ops: ${this.getNumAsyncOps()}\n`);
