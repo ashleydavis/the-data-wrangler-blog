@@ -3,6 +3,7 @@
 </div>
 
 {% for post in site.posts %}
+{% if post.published %}
 {% assign author = site.data.authors[post.author] %}
 
 <article class="post {{post.post_class}}">
@@ -22,6 +23,7 @@
         <time class="post-date" datetime="{{post.date format="YYYY-MM-DD"}}">{{post.date | date: "%e %b %Y"}}</time>
     </footer>
 </article>
+{% endif %}
 {% endfor %}
 
 {{pagination}}
