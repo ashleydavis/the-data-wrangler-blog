@@ -133,8 +133,7 @@ The following table provides brief descriptions of each microservice.
             Gateway
         </td>
         <td>
-            The gateway to the outside world.<br>
-            Allows customers to interact with Sortal through the web.<br>
+            The gateway to the outside world. Allows customers to interact with Sortal through the web.<br>
             <br>
             Responsible for authentication.
         </td>
@@ -145,16 +144,11 @@ The following table provides brief descriptions of each microservice.
             Asset upload
         </td>
         <td>
-            Manages the upload of assets. Notifies the system that new<br>
-            assets have arrived.<br>
+            Manages the upload of assets. Notifies the system that new assets have arrived.<br>
             <br>
-            This is our most crucial microservice, because being able to<br> 
-            reliably capture customer uploads is core to our functionality.<br>
+            This is our most crucial microservice, because being able to reliably capture customer uploads is core to our functionality.<br>
             <br>
-            Microservices are useful here because it allows us to keep<br> 
-            this code small. That’s important because less code<br>  
-            means there is less space for bugs to hide and less bugs<br> 
-            mean we can more reliably capture uploaded assets.
+            Microservices are useful here because it allows us to keep this code small. That’s important because less code means there is less space for bugs to hide and less bugs mean we can more reliably capture uploaded assets.
         </td>
     </tr>
 

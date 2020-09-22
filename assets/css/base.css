@@ -2201,3 +2201,6 @@ body:not(.post-template) .post-title {
     color: yellow;
 }
 
+table {
+    border-collapse: collapse;
+}
