@@ -146,15 +146,15 @@ The following table provides brief descriptions of each microservice.
         </td>
         <td>
             Manages the upload of assets. Notifies the system that new<br>
-            assets have arrived.
+            assets have arrived.<br>
             <br>
             This is our most crucial microservice, because being able to<br> 
             reliably capture customer uploads is core to our functionality.<br>
             <br>
             Microservices are useful here because it allows us to keep<br> 
-            this code small. That’s important because less code means there<br> 
-            is less space for bugs to hide and less bugs mean we can more<br> 
-            reliably capture uploaded assets.
+            this code small. That’s important because less code<br>  
+            means there is less space for bugs to hide and less bugs<br> 
+            mean we can more reliably capture uploaded assets.
         </td>
     </tr>
 
