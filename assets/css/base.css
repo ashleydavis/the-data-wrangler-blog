@@ -2200,7 +2200,3 @@ body:not(.post-template) .post-title {
 .df-ad-sponsor-link a:active {
     color: yellow;
 }
-
-table {
-    border-collapse: collapse;
-}
