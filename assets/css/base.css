@@ -1109,8 +1109,7 @@ body:not(.post-template) .post-title {
    text column to break out. */
 .post-content img {
     display: block;
-    max-width: 126%;
-    height: auto;
+    width: auto;
     padding: 0.6em 0;
     /* Centers an image by (1) pushing its left edge to the
        center of its container and (2) shifting the entire image
@@ -1999,13 +1998,6 @@ body:not(.post-template) .post-title {
 
     .post-template .site-footer {
         margin-top: 0;
-    }
-
-    .post-content img {
-        padding: 0;
-        width: calc(100% + 32px); /* expand with to image + margins */
-        min-width: 0;
-        max-width: 112%; /* fallback when calc doesn't work */
     }
 
     .post-meta {
