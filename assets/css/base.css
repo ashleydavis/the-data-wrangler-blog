@@ -1107,7 +1107,8 @@ body:not(.post-template) .post-title {
 
 .post-content img {
     display: block;
-    width: auto;
+    width: 100%;
+    height: auto;
 }
 
 .footnotes {
