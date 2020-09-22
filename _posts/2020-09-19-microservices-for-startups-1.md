@@ -145,14 +145,16 @@ The following table provides brief descriptions of each microservice.
             Asset upload
         </td>
         <td>
-            Manages the upload of assets. Notifies the system that new assets have arrived.
+            Manages the upload of assets. Notifies the system that new<br>
+            assets have arrived.
             <br>
-            This is our most crucial microservice, because being able to reliably capture<br>
-            customer uploads is core to our functionality.<br>
+            This is our most crucial microservice, because being able to<br> 
+            reliably capture customer uploads is core to our functionality.<br>
             <br>
-            Microservices are useful here because it allows us to keep this code small.<br>
-            That’s important because less code means there is less space for bugs to hide<br>
-            and less bugs mean we can more reliably capture uploaded assets.
+            Microservices are useful here because it allows us to keep<br> 
+            this code small. That’s important because less code means there<br> 
+            is less space for bugs to hide and less bugs mean we can more<br> 
+            reliably capture uploaded assets.
         </td>
     </tr>
 
@@ -161,8 +163,9 @@ The following table provides brief descriptions of each microservice.
             Asset storage
         </td>
         <td>
-            An abstraction on our external file storage. Allows us to plugin in different<br> 
-            storage engines depending on customer requirements (again keeping our options open).
+            An abstraction on our external file storage. Allows<br>
+            us to plugin in different storage engines depending<br>  
+            on customer requirements (again keeping our options open).
         </td>
     </tr>
 
@@ -171,7 +174,8 @@ The following table provides brief descriptions of each microservice.
             Job queue
         </td>
         <td>
-            Manages jobs (i.e. thumbnail generation) that are applied to assets.<br>
+            Manages jobs (i.e. thumbnail generation) that are<br> 
+            applied to assets.<br>
             <br>
             When jobs fail or timeout they are automatically retried.
         </td>
@@ -182,11 +186,12 @@ The following table provides brief descriptions of each microservice.
             Asset pipeline
         </td>
         <td>
-            The asset pipeline comprises various microservices that implement the jobs<br>
-            (i.e. thumbnail generation) that are applied to assets to extract baseline<br>
-            information from assets.<br>
+            The asset pipeline comprises various microservices that<br> 
+            implement the jobs (i.e. thumbnail generation) that are<br> 
+            applied to assets to extract baseline information from assets.<br>
             <br>
-            Metadata produced by the asset pipeline is published to the metadata service.
+            Metadata produced by the asset pipeline is published<br> 
+            to the metadata service.
         </td>
     </tr>
 
@@ -195,7 +200,8 @@ The following table provides brief descriptions of each microservice.
             Metadata
         </td>
         <td>
-            Collects and maintains a database of the metadata for every asset.
+            Collects and maintains a database of the metadata for<br> 
+            every asset.
         </td>
     </tr>
 
@@ -204,12 +210,14 @@ The following table provides brief descriptions of each microservice.
             Learning engine
         </td>
         <td>
-            The Sortal learning engine learns as customers use the product.<br>
+            The Sortal learning engine learns as customers use<br> 
+            the product.<br>
             <br>
-            It automatically builds an additional layer of meaning on top of the<br>
-            baseline information.<br>
+            It automatically builds an additional layer of meaning<br> 
+            on top of the baseline information.<br>
             <br>
-            It customises the Sortal user experience to be unique for each customer.
+            It customises the Sortal user experience to be unique<br>  
+            for each customer.
         </td>
     </tr>
 
@@ -218,8 +226,8 @@ The following table provides brief descriptions of each microservice.
             Search
         </td>
         <td>
-            Bakes the metadata into an efficient search index allowing customers<br>
-            to quickly search for relevant assets.
+            Bakes the metadata into an efficient search index<br>
+            allowing customers to quickly search for relevant assets.
         </td>
     </tr>
 </table>
