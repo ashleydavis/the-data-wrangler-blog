@@ -2,11 +2,11 @@
 layout: post
 title: Microservices for startups, part 2
 image: "/content/images/2020/09/how-to-guide-microservices-startups.jpeg"
-date: '2020-09-19 08:30:00'
+date: '2020-09-28 08:30:00'
 permalink: microservices-for-startups-2
 post_class: feature
 disqus_id: microservices-for-startups-2
-published: false
+published: true
 excerpt: "
 The how-to guide to microservices for startups, small teams and solo developers.
 "
