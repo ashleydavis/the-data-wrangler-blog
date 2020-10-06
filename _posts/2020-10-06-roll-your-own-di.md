@@ -2,11 +2,11 @@
 layout: post
 title: Roll your own dependency injection
 image: "/content/images/2020/09/roll-your-own-dependency-injection.png"
-date: '2020-09-19 08:30:00'
+date: '2020-10-06 08:30:00'
 permalink: roll-your-own-di
 post_class: feature
 disqus_id: roll-your-own-di
-published: false
+published: true
 excerpt: "
 How to roll your own dependency injection with TypeScript decorators and the JavaScript Proxy class — it’s easier than you think.
 "
