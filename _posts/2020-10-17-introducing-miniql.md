@@ -2,11 +2,11 @@
 layout: post
 title: "MiniQL: Building a query language in TypeScript"
 image: "/content/images/2020/09/miniql-building-query-language-typescript.png"
-date: '2020-09-19 08:30:00'
+date: '2020-10-17 08:30:00'
 permalink: introducing-minql
 post_class: feature
 disqus_id: introducing-minql
-published: false
+published: true
 excerpt: "
 In this blog post, I’d like to introduce you to my new open-source project called MiniQL. We’ll also talk about why I reinvented the wheel and when it’s OK to do that.
 "
