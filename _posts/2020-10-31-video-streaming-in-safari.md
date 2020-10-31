@@ -33,6 +33,9 @@ Notice that in Figure 2, when the webpage is viewed in Safari, the video on the 
 ![Video streaming in Chrome](/content/images/2020/10/video-streaming-example-chrome-annotated.png)
 ##### Figure 1: Video streaming example viewed in Chrome.
 
+<br>
+<br>
+
 ![Video streaming in Safari](/content/images/2020/10/video-streaming-example-safari-annotated.png)
 ##### Figure 2: Video streaming example viewed in Safari. Notice that the basic video streaming on the left is not functional.
 
