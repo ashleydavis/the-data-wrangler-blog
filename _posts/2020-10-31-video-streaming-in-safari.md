@@ -30,17 +30,17 @@ Start the server as [instructed in the readme](https://github.com/bootstrapping-
 
 Notice that in Figure 2, when the webpage is viewed in Safari, the video on the left side doesn’t work. However, the example on the right does work, and this post explains how I achieved a working version of the video streaming code for Safari.
 
-todo: video-streaming-example-chrome-annotated.png
+![Video streaming in Chrome](/content/images/2020/10/video-streaming-example-chrome-annotated.png)
 ##### Figure 1: Video streaming example viewed in Chrome.
 
-todo: video-streaming-example-safari-annotated.png
+![Video streaming in Safari](/content/images/2020/10/video-streaming-example-safari-annotated.png)
 ##### Figure 2: Video streaming example viewed in Safari. Notice that the basic video streaming on the left is not functional.
 
 ## Basic video streaming
 
 The basic form of video streaming that works in Chrome is trivial to implement in your HTTP server. We are simply streaming the entire video file from the backend to the frontend, as illustrated in Figure 3.
 
-todo: simple-streaming-flow.png
+![Simple video streaming flow](/content/images/2020/10/simple-streaming-flow.png)
 ##### Figure 3: Simple video streaming that works in Chrome.
 
 ## In the frontend
@@ -148,7 +148,7 @@ Instead, Safari wants to just go back a bit and request that portion of the file
 
 Figure 4 gives you an idea of how this works. We need to modify our HTTP server so that rather than streaming the entire video file to the frontend, we can instead serve random access portions of the file depending on what the browser is requesting.
 
-todo: range-streaming-flow.png
+![Video streaming flow with HTTP range](/content/images/2020/10/range-streaming-flow.png)
 ##### Figure 4: For video streaming to work in Safari, we must support HTTP range requests that can retrieve a portion of the video file instead of the whole file.
 
 ### Supporting HTTP range requests
