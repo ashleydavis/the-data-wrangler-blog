@@ -52,7 +52,7 @@ Kubernetes gives us automated orchestration of containers across an elastically 
 
 Importantly these open source tools have allowed us to break away from cloud-vendor lock-in.
 
-As great as these technologies are, they are still complicated. They are complicated to learn and they are complicated to set up and configure. Of course they are also complicated to maintain over time. 
+As great as these technologies are, **they are still complicated**. They are complicated to learn and they are complicated to set up and configure. Of course they are also complicated to maintain over time. 
 
 I believe there is a room for a new tool that builds on these standard technologies and that greatly simplifies the following:
 
@@ -89,9 +89,9 @@ You can also create a Doulevo project from an existing code-base using the _init
 doulevo init
 ```
 
-This _create _and _init _commands are interactive and allow you to select the name of the application and to authenticate with the application’s Doulevo backend. The authentication process should be simple and quick, akin to how cloud-vendors provide a command that allows you to download configuration to authenticate with your Kubernetes cluster.
+This *create* and *init* commands are interactive and allow you to select the name of the application and to authenticate with the application’s Doulevo backend. The authentication process should be simple and quick, akin to how cloud-vendors provide a command that allows you to download configuration to authenticate with your Kubernetes cluster.
 
-The type of project (e.g. Node.js) is automatically detected (where possible) and the user is then prompted to confirm the project type or choose an alternative project type. The user may also have to enter commands to build, run and test the project (unless they can be automatically detected, for example the command `npm start` and `npm test` used by Node.js). 
+The type of project (e.g. Node.js) is automatically detected (where possible) and the user is then prompted to confirm the project type or choose an alternative project type. The user may also have to enter commands to build, run and test the project (unless they can be automatically detected, for example the commands `npm start` and `npm test` used by Node.js). 
 
 # Configuration
 
@@ -101,7 +101,7 @@ The cache directory records authentication details and caches any plugins that h
 
 # Many services
 
-A distributed application is composed of many services and services can be located separate on your development computer or they can be co-located under a parent directory.
+A distributed application is composed of many services and services can be located separately on your development computer or they can be co-located under a parent directory.
 
 Each service on your development computer can be separately authenticated with the backend. This means you can be working with services for different applications or different backends by working in different directories on your development computer. 
 
@@ -131,7 +131,7 @@ Doulevo first runs the runtime specific tests (e.g. by running `npm test` for No
 
 # Deploying a service
 
-A service can be deployed to its configured backend by invoking the _deploy _command:
+A service can be deployed to its configured backend by invoking the *deploy* command:
 ```bash
 doulevo deploy
 ```
@@ -181,7 +181,7 @@ Managed Doulevo should include:
 
 Doulevo is built to be extended. It is built on plugins that allow it to be completely repurposed.
 
-The _create _type of plugin knows how to create or initialize projects for various technology stacks. For example the _Node.js_ plugin knows how to create a Node.js project and the _Python3_ plugin knows how to build a Python project and so on.
+The *create* type of plugin knows how to create or initialize projects for various technology stacks. For example the *Node.js*f plugin knows how to create a Node.js project and the _Python3_ plugin knows how to build a Python project and so on.
 
 The _build_ type of plugin builds a service. This defaults to using Docker to build an image. Underneath the _Docker build_ plugin are various other plugins that know how to create Dockerfiles for various project types. The various _create_ plugins can be reused for this.
 
@@ -193,7 +193,7 @@ Doulevo offers multiple levels of customization.
 
 Normally Doulevo automatically generates configuration files  such as Dockerfiles and Kubernetes files for your services. But you can also explicitly provide dev, test and prod Docker and Kubernetes files to override Doulevo’s automatic configuration generation.
 
-You can invoke the _generate _command to automatically generate all configuration files into your project:
+You can invoke the *generate* command to automatically generate all configuration files into your project:
 ```bash
 doulevo generate
 ```
@@ -202,9 +202,9 @@ After generating your configuration files you can then customize the ones you wa
 
 # My inspiration
 
-Although the idea for Doulevo has been forming in my mind for some time (building an open source _Heroku_ is a common idea) but it came to fruition recently when I tried the _Parcel_ web site bundler. 
+Although the idea for Doulevo has been forming in my mind for some time (building an open source _Heroku_ is a common idea) it only came to fruition recently when I tried the _Parcel_ web site bundler. 
 
-Parcel is like Webpack, but it eliminates almost all of the complex configuration that is required by Webpack. I then thought to myself, I already have great general-purpose recipes for building distributed applications, but they all require a lot of complex configuration. If only I could build something like Parcel, but for distributed application development that we can automatically generate all the boilerplate configuration (Docker files, Docker-Compose files, Kubernetes Yaml files, etc) for the recurring recipes that we use.
+Parcel is like Webpack, but it eliminates almost all of the complex configuration that is required by Webpack. I then thought to myself, I already have great general-purpose recipes for building distributed applications, but they all require a lot of complex configuration. If only I could build something like Parcel, but for distributed application development that we can automatically generate all the boilerplate configuration (Docker files, Docker-Compose files, Kubernetes Yaml files, etc) for the recurring recipes that we use. Wouldn't that be nice?
 
 # Conclusion
 
