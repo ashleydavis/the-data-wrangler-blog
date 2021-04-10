@@ -21,11 +21,11 @@ This document represents an idea in development and will likely change in the fu
 
 Doulevo is Greek for “put to work”.
 
-# Primary aim
+## Primary aim
 
 * Doulevo reduces the amount of overhead required to configure and deploy distributed applications giving more power to small teams who have limited resources.
 
-# Key points
+## Key points
 
 *   Doulevo provides a simpler means to build, run, test and deploy distributed applications and _parts of_ distributed applications.
 *   Doulevo is open source, and builds on industry-standard and open source technologies like Docker and Kubernetes.
@@ -40,7 +40,7 @@ Doulevo is Greek for “put to work”.
     *   Use whatever tech stack without installing specific tools (thanks to Docker)
 *   There are opportunities for an enterprising startup or cloud vendor to commercialize and simplify creation of the Doulevo backend (e.g. one-click backend setup).
 
-# Towards simplicity
+## Towards simplicity
 
 Building and deploying distributed applications, whilst more accessible than ever before, is still more complicated than it needs to be. 
 
@@ -61,7 +61,7 @@ I believe there is a room for a new tool that builds on these standard technolog
 *   Development and maintenance of automated deployment pipelines; and
 *   Creation and maintenance of backend infrastructure.
 
-# Creating a new service project
+## Creating a new service project
 
 A Doulevo project is simply a service built on virtually any technology stack (e.g. a microservice built on Node.js).
 
@@ -82,7 +82,7 @@ doulevo create python3 my-new-python-service
 
 Doulevo knows how to create projects for different technology stacks because it is plugin-based. Community created plugins extend the capabilities of Doulevo to work with many programming languages and many different backend environments. I’ll say more about plugins soon.
 
-# Initializing an existing service project
+## Initializing an existing service project
 
 You can also create a Doulevo project from an existing code-base using the _init_ command:
 ```bash
@@ -93,19 +93,19 @@ This *create* and *init* commands are interactive and allow you to select the na
 
 The type of project (e.g. Node.js) is automatically detected (where possible) and the user is then prompted to confirm the project type or choose an alternative project type. The user may also have to enter commands to build, run and test the project (unless they can be automatically detected, for example the commands `npm start` and `npm test` used by Node.js). 
 
-# Configuration
+## Configuration
 
 Creating or initializing a project creates a configuration file (e.g. `.doulevo.yaml)` and a hidden cache directory (e.g. `.doulevo`). The configuration file records the project type (e.g. Node.js) and the commands to build, run and test the service. 
 
 The cache directory records authentication details and caches any plugins that have been downloaded to make Doulevo work for various project types. The configuration file should be committed to version control, the cache directory should not.
 
-# Many services
+## Many services
 
 A distributed application is composed of many services and services can be located separately on your development computer or they can be co-located under a parent directory.
 
 Each service on your development computer can be separately authenticated with the backend. This means you can be working with services for different applications or different backends by working in different directories on your development computer. 
 
-# Running a service
+## Running a service
 
 A service is executed on the local development computer by invoking the _run_ command:
 ```bash
@@ -118,7 +118,7 @@ Services running in the same application use DNS to find each other and HTTP or 
 
 Running a service automatically generates a development Dockerfile appropriate for the particular project type, builds the Dockerfile and then runs it. Live code reload is automatically supported, code is automatically synchronized through to the container running the service and the service is automatically restarted when code is edited.
 
-# Testing a service
+## Testing a service
 
 A service can be tested by two means. The first is through whatever ordinary automated testing you can use for your runtime environment. For example using Node.js I’d use Jest or Mocha to test my code in the normal way. The second is by running tests against the running service itself.
 
@@ -129,7 +129,7 @@ doulevo test
 
 Doulevo first runs the runtime specific tests (e.g. by running `npm test` for Node.js). If those tests pass it then builds and runs the container for the service and runs tests against it (using a testing framework of your choice).
 
-# Deploying a service
+## Deploying a service
 
 A service can be deployed to its configured backend by invoking the *deploy* command:
 ```bash
@@ -144,7 +144,7 @@ Doulevo automatically supports deployment to separate backend environments based
 
 Files called `.include` and `.exclude` control which files are included in the deployed service (this generates a `.dockerignore` file as part of the build process).
 
-# Many projects
+## Many projects
 
 A distributed application is composed of many services. These can be independent projects in separate directories on the development computer, each project can be run using `doulevo run` or deployed with `doulevo deploy`.
 
@@ -154,19 +154,19 @@ When services are combined together you can invoke `doulevo run` or `doulevo dep
 
 Note that Doulevo is smart and it won’t build and deploy a service unless the code has changed. So invoking `doulevo deploy` on a multi-service repository will only deploy those services that need to be deployed (unless you use the `--force` option to force a deployment to occur even if the code hasn’t changed).
 
-# Automated deployment
+## Automated deployment
 
 You can have automated deployment of your Doulevo services by simply invoking `doulevo auth` and `duolevo deploy` from the CD pipeline of a service or multi-service code repository (as supported by GitHub, GitLab, Bitbucket and other version control providers).
 
 You can also run tests in your CD pipeline by invoking `doulevo test`.
 
-# The backend
+## The backend
 
 Deployment works through plugins, so the Doulevo backend can be any cloud-based containers platform. However I’d like to see a canonical/reference backend built on Kubernetes that automatically includes a container registry configured to work with Doulevo.
 
 I hope that it can be made easy to deploy the canonical Doulevo backend directly from the marketplace of any of the cloud vendors. This would mean a couple of clicks (and choosing a password or API key) is all that’s required to deploy a Doulevo backend to your cloud vendor of choice.
 
-# Managed Doulevo
+## Managed Doulevo
 
 There is a commercial opportunity here for an enterprising startup or cloud-vendor to provide one-click deployment of Doulevo. 
 
@@ -177,7 +177,7 @@ Managed Doulevo should include:
     *   Managing service deployments, environments and secrets; and
     *   Viewing and searching aggregated application logging.
 
-# Plugin-based extensibility
+## Plugin-based extensibility
 
 Doulevo is built to be extended. It is built on plugins that allow it to be completely repurposed.
 
@@ -187,7 +187,7 @@ The _build_ type of plugin builds a service. This defaults to using Docker to bu
 
 The _deploy_ type of plugin knows how to deploy a service to a particular type of backend. The canonical backend for Doulevo knows how to deploy services to Kubernetes, but other cloud-based container runtimes can be supported using this type of plugin. 
 
-# Customziation
+## Customziation
 
 Doulevo offers multiple levels of customization. 
 
@@ -200,13 +200,13 @@ doulevo generate
 
 After generating your configuration files you can then customize the ones you want to customize and delete the ones you don’t want to customize.
 
-# My inspiration
+## My inspiration
 
 Although the idea for Doulevo has been forming in my mind for some time (building an open source _Heroku_ is a common idea) it only came to fruition recently when I tried the _Parcel_ web site bundler. 
 
 Parcel is like Webpack, but it eliminates almost all of the complex configuration that is required by Webpack. I then thought to myself, I already have great general-purpose recipes for building distributed applications, but they all require a lot of complex configuration. If only I could build something like Parcel, but for distributed application development that we can automatically generate all the boilerplate configuration (Docker files, Docker-Compose files, Kubernetes Yaml files, etc) for the recurring recipes that we use. Wouldn't that be nice?
 
-# Conclusion
+## Conclusion
 
 Doulevo is a command line tool and backend that I have dreamed up to simplify building, testing and deployment of distributed applications.
 
