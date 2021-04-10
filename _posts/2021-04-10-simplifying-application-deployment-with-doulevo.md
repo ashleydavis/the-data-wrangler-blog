@@ -48,7 +48,7 @@ Modern tools for building applications like Docker and Kubernetes are fantastic 
 
 Docker provides standardization between development and production environments. It allows us to package our services for deployment and abstracts away the details of the technology stack used within the service.
 
-Kubernetes gives us automated orchestration of containers across a elastically scalable cluster of computers and provides an API for automating deployments.
+Kubernetes gives us automated orchestration of containers across an elastically scalable cluster of computers and provides an API for automating deployments.
 
 Importantly these open source tools have allowed us to break away from cloud-vendor lock-in.
 
