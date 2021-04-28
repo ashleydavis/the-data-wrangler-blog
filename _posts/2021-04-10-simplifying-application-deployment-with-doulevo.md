@@ -21,6 +21,18 @@ This document represents an idea in development and will likely change in the fu
 
 Doulevo is Greek for “put to work”.
 
+## Video and other resources
+
+Don't have time to read the blog post? You can watch the video here:
+https://youtu.be/BFayOne9LZk
+
+
+To support this project star the code repo here:
+https://github.com/doulevo/doulevo
+
+For updates follow me on Twitter:
+https://twitter.com/ashleydavis75
+
 ## Primary aim
 
 * Doulevo reduces the amount of overhead required to configure and deploy distributed applications giving more power to small teams who have limited resources.
@@ -215,3 +227,15 @@ Doulevo is built on industry standard open source tools like Docker and Kubernet
 At the same time Doulevo frees you from vendor lock-in.
 
 If this idea appeals to you, please let me know. I’m planning on doing a video soon to really get this idea across. For updates you can [follow me on Twitter](https://twitter.com/ashleydavis75).
+
+## Video and other resources
+
+Don't have time to read the blog post? You can watch the video here:
+https://youtu.be/BFayOne9LZk
+
+
+To support this project star the code repo here:
+https://github.com/doulevo/doulevo
+
+For updates follow me on Twitter:
+https://twitter.com/ashleydavis75
